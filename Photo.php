@@ -53,6 +53,8 @@ catch(Exception $e) {
 	echo 'No images found for this slideshow.<br />';	
 }
 ?>
+				<p>&nbsp;</p>
+				<p>Here are some photos of mine</p>
 				</div>
 </div>
 			<div class="footer">
