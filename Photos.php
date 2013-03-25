@@ -28,7 +28,7 @@ See here for a complete listing of cycle options:<br>
 <a href="http://jquery.malsup.com/cycle/options.html">http://jquery.malsup.com/cycle/options.html</a>
 <br><br>
 <?php
-$directory = 'images/slideshow'; 	
+$directory = 'Images/slideshow'; 	
 try {    	
 	// Styling for images	
 	echo '<div id="myslides">';	
