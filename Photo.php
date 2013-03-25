@@ -8,7 +8,18 @@
 		<!--[if IE 7]>
 			<link rel="stylesheet" href="css/ie7.css" type="text/css" />
 		<![endif]-->
-	</head>
+<script src="scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="scripts/jquery.cycle.lite.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#myslides').cycle({
+		fit: 1, pause: 1, timeout: 4000
+	});
+});
+</script>
+
+
+		</head>
 	<body>
 		<div class="page">
 			<div class="header">
@@ -25,15 +36,23 @@
 			<div class="body">
 				<div id="featured">
 					<h3>Some Photos</h3>
-<script src="scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
-<script src="scripts/jquery.cycle.lite.js" type="text/javascript"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-	$('#myslides').cycle({
-		fit: 1, pause: 1, timeout: 4000
-	});
-});
-</script>
+<?php
+$directory = 'Images/slideshow'; 	
+try {    	
+	// Styling for images	
+	echo '<div id="myslides">';	
+	foreach ( new DirectoryIterator($directory) as $item ) {			
+		if ($item->isFile()) {
+			$path = $directory . '/' . $item;	
+			echo '<img src="' . $path . '"/>';	
+		}
+	}	
+	echo '</div>';
+}	
+catch(Exception $e) {
+	echo 'No images found for this slideshow.<br />';	
+}
+?>
 				</div>
 </div>
 			<div class="footer">
