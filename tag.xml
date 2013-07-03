@@ -1,0 +1,8 @@
+<Project>
+	<name>seblovWebSite</name>
+	<language>html</language>
+	<platform>RPi</platform>
+	<status></status>
+	<description>Basic Website on Raspberry Pi</description>
+	<subversion>None</subversion>
+</Project>
