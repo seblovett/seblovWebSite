@@ -15,10 +15,7 @@
             	<h1>Henry Lovett</h1>
 			  <ul>
               
-		    <li class="selected"><a href="index.html">Home</a></li>
-					<li><a href="awards.html">Awards and Achievements</a></li>
-					<li><a href="projects.html">Projects</a></li>
-					<li><a href="misc.html">Other Things</a></li>
+				   <?php include 'links.php'; ?>
 				</ul>
 			  <h3>&nbsp;</h3>
 			</div>
