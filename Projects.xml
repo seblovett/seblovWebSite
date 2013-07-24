@@ -2,52 +2,76 @@
 <?xml-stylesheet type="text/xsl" href="xsl/project.xsl"?>
 
 <projects>
-  <project>
-	<name>This Website!</name>
-	<description>After doing some projects, I decided to put them online, so I undertook the task of making a website. <br/> Using a template from <a href="freewebsitetemplates.com">freewebsitetemplates.com</a>, I began creating. The website uses a CSS template as the main style. There are some PHP scripts around as well. This Projects page uses an XML database and a XSLT style sheet to display it and is called from PHP. <br/>The result can be seen around you. It documents all the interesting things about me, from my acheivements to my projects. It is a working progress and I anticipate many changes will be made to this.</description>
-  </project> 
-  <project>
-    <name>Part 3 Project</name>
-	<description>The Part 3 project is an individual project undertaken in the Third year at Southampton University. For my project, I undertook an ambitious project to build an autonomous stereoscopic mapping robot. Though the full specification of the robot was not acheived, the final result was a built robot able to respond to movement. <br/>
-	The Robot used to OV7670 cameras and an AVR32UC3C Microcontroller with an extra 4MB of RAM. The PCB was custom made by <a href="www.pcbcart.com">PCB Cart</a> and is a four layer board.<br/><img src="images/columbus.JPG" alt="The Columbus Robot"/></description>
-  </project>
-  <project>
-  <name>test</name>
-  </project><project>
-  <name>test</name>
-  </project><project>
-  <name>test</name>
-  </project><project>
-  <name>test</name>
-  </project><project>
-  <name>test</name>
-  </project><project>
-  <name>test</name>
-  </project><project>
-  <name>test</name>
-  </project><project>
-  <name>test</name>
-  </project><project>
-  <name>test</name>
-  </project><project>
-  <name>test</name>
-  </project><project>
-  <name>test</name>
-  </project><project>
-  <name>test</name>
-  </project><project>
-  <name>test</name>
-  </project><project>
-  <name>test</name>
-  </project><project>
-  <name>test</name>
-  </project><project>
-  <name>test</name>
-  </project><project>
-  <name>test</name>
-  </project><project>
-  <name>test</name>
-  </project><project>
-  <name>test</name>
-  </project>
+	<project>
+		<name>This Website!</name>
+		<description>After doing some projects, I decided to put them online, so I undertook the task of making a website. <br/> Using a template from <a href="http://www.freewebsitetemplates.com">freewebsitetemplates.com</a>, I began creating. The website uses a CSS template as the main style. There are some PHP scripts around as well. This Projects page uses an XML database and a XSLT style sheet to display it and is called from PHP. <br/>The result can be seen around you. It documents all the interesting things about me, from my acheivements to my projects. It is a working progress and I anticipate many changes will be made to this.</description>
+		<info>More info!</info>
+	</project> 
+	<project>
+		<name>Part 3 Project</name>
+		<description>The Part 3 project is an individual project undertaken in the Third year at Southampton University. For my project, I undertook an ambitious project to build an autonomous stereoscopic mapping robot. Though the full specification of the robot was not acheived, the final result was a built robot able to respond to movement. <br/>
+	The Robot used to OV7670 cameras and an AVR32UC3C Microcontroller with an extra 4MB of RAM. The PCB was custom made by <a href="www.pcbcart.com">PCB Cart</a> and is a four layer board.</description>
+		<image>
+			<src>images/columbus.JPG</src>
+			<alt>The Columbus Robot</alt>
+		</image>
+		<info>More info!</info>
+	</project>
+	<project>
+		<name>test</name>
+	</project>
+	<project>
+		<name>test</name>
+	</project>
+	<project>
+		<name>test</name>
+	</project>
+	<project>
+		<name>test</name>
+	</project>
+	<project>
+		<name>test</name>
+	</project>
+	<project>
+		<name>test</name>
+	</project>
+	<project>
+		<name>test</name>
+	</project>
+	<project>
+		<name>test</name>
+	</project>
+	<project>
+		<name>test</name>
+	</project>
+	<project>
+		<name>test</name>
+	</project>
+	<project>
+		<name>test</name>
+	</project>
+	<project>
+		<name>test</name>
+	</project>
+	<project>
+		<name>test</name>
+	</project>
+	<project>
+		<name>test</name>
+	</project>
+	<project>
+		<name>test</name>
+	</project>
+	<project>
+		<name>test</name>
+	</project>
+	<project>
+		<name>test</name>
+	</project>
+	<project>
+		<name>test</name>
+	</project>
+	<project>
+		<name>test</name>
+	</project>
 </projects>

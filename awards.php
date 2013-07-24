@@ -12,7 +12,7 @@
 	<body>
 		<div class="page">
 			<div class="header">
-            	<h1>Awards and Achievements</h1>
+            	<h1 id="title">Awards and Achievements</h1>
 			  <ul>
               
 		    <?php include 'links.php'; ?>

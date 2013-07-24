@@ -30,8 +30,8 @@ body{
 }
 .header a#logo{
 	display:block;
-	float:right;
-	outline:0;
+	float:left;
+	outline:none;
 }
 .header a#logo img{
 	border:0;
@@ -39,7 +39,7 @@ body{
 .header ul{
 	margin:0;
 	list-style:none;
-	padding:40px 0 0;
+	padding:13px 0 0;
 	float:right;
 }
 .header ul li{
@@ -56,14 +56,13 @@ body{
 	font-family: 'RokkittRegular';
 	outline:none;
 }
-.header  h1{
+.header h1#title{
+	display:block;
+	float:left;
+	outline:none;
+	font-size:30px;
+	border:0;
 	color:#f78117;
-	font-size:36px;
-	font-family: 'RokkittRegular';
-	margin:0 0 30px;
-	width:490px;
-	padding:10px 0 0;
-	font-weight:normal;
 }
 /*------------------------- Body ------------------------*/ 
 .body{
@@ -73,8 +72,8 @@ body{
 	overflow:hidden;
 }
 .body div#featured{
-	background:url(../images/) no-repeat right top;
-
+	background:url(../images/house.jpg) no-repeat right top;
+	height:448px;
 	padding:0 0 17px;
 }
 .body div#featured h3{
@@ -82,7 +81,7 @@ body{
 	font-size:36px;
 	font-family: 'RokkittRegular';
 	margin:0 0 30px;
-	width:600px;
+	width:490px;
 	padding:100px 0 0;
 	font-weight:normal;
 }
@@ -183,7 +182,7 @@ body{
 	font-weight:bold;
 	color:#636363;
 	margin:15px 0 0;
-	line-height:30px;
+	line-height:21px;
 }
 .body p{
 	font-family: 'RokkittRegular';
@@ -263,7 +262,7 @@ body{
 	float:left;
 	margin:0 0 0 50px;
 	width:609px;
-	background:url(../images/button-more.jpg) no-repeat left bottom;
+	/*background:url(../images/button-more.jpg) no-repeat left bottom;*/
 }
 .body ul li div h3{
 	margin:0;
@@ -298,7 +297,6 @@ body{
 .body ul.paging li a:hover{
 	color:#5D5D5D;
 }
-
 /*------------------------- Footer ------------------------*/ 
 .footer{
 	width:940px;

@@ -12,7 +12,7 @@
 	<body>
 		<div class="page">
 			<div class="header">
-            	<h1>Henry Lovett</h1>
+            	<h1 id="title">Henry Lovett</h1>
 			  <ul>
               
 				   <?php include 'links.php'; ?>

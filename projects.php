@@ -14,7 +14,7 @@
 	<body>
 		<div class="page">
 			<div class="header">
-            	<h1>Projects</h1>
+            	<h1  id="title">Projects</h1>
 			  <ul>
               
 		    		<?php include 'links.php'; ?>
@@ -22,10 +22,7 @@
 			  <h3>&nbsp;</h3>
 			</div>
 			<div class="body">
-				<div id="featured">
-				  <!--<h3>Projects</h3>
-					<p>This page will be updated with current and past projects that I have done.</p>-->
-					
+			<ul>			
                 <?php
 					$PAGE = 1;
 					if (isset($_REQUEST['page']))
@@ -54,7 +51,7 @@
 					print $xslt->transformToXML( $XML );
 				?>
                 
-                
+        </ul>        
 </div>
 
 			<?php include 'footer.php'; ?>
