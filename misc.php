@@ -25,18 +25,7 @@
                     <p>I will update this page with interesting things I find and maybe some photos that I have taken. </p>
 				</div>
 </div>
-			<div class="footer">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="services.html">Gallery</a></li>
-				</ul>
-				<p>&nbsp;          	</p>
-				<div class="connect">
-					<a href="http://www.facebook.com/hslovett" id="facebook">facebook</a>
-				</div>
-			</div>
+			<?php include 'footer.php'; ?>
 		</div>
 	</body>
 </html>  
