@@ -19,7 +19,7 @@ $sec = "1";
 			<div class="header">
             
             	<h1>Henry Lovett</h1>
-				<a id="logo"><img src="Images/logo.gif"/></a>
+				
 			  	<ul>
 		    		<?php include 'links.php'; ?>
 						
