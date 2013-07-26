@@ -5,7 +5,7 @@
 	<project>
 		<name>This Website!</name>
 		<description>After doing some projects, I decided to put them online, so I undertook the task of making a website. <br/> Using a template from <a href="http://www.freewebsitetemplates.com">freewebsitetemplates.com</a>, I began creating. The website uses a CSS template as the main style. There are some PHP scripts around as well. This Projects page uses an XML database and a XSLT style sheet to display it and is called from PHP. <br/>The result can be seen around you. It documents all the interesting things about me, from my acheivements to my projects. It is a working progress and I anticipate many changes will be made to this.</description>
-		<info>More info!</info>
+		<link>projects/website.php</link>
 	</project> 
 	<project>
 		<name>Part 3 Project</name>
@@ -15,7 +15,7 @@
 			<src>images/columbus.JPG</src>
 			<alt>The Columbus Robot</alt>
 		</image>
-		<info>More info!</info>
+		<link>projects/columbus.php</link>
 	</project>
 	<project>
 		<name>test</name>
