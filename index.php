@@ -30,16 +30,23 @@ $sec = "1";
             
             
 			<div class="body">
-				<div id="featured">
+			<ul>
+			<li>
+				<div class="featured">
+							<img src="Images/Me.jpg" alt="Henry In Mexico" width="260px" height="260px"/>
+
+						</div>
+			
+				<div>
 					<h3 class="blog">Hello</h3>
 					
 					<p class="blog">I am a fourth year Electronic Engineering student at the University of Southampton. I began my interest in Electronics at GCSE level, building simple circuits and testing them. This inspired me to take it to a higher level at University along with some hobbyist electronics along the way. A large proportion of my interest is now in Embedded Systems, automation, robotics and computers. </p>
-					<p>&nbsp;</p>
+					
 					<p>This website is a summary of me, my projects of both academic and hobbyist, my achievements and maybe some other things. Feel free to browse the site and contact me if you have any queries. My Curriculum Vitae is also availiable <a href="./Documents/HenryLovett_CV.pdf">here.</a></p>
 					<p>
                     
-				</div>
-            
+				</div></li>
+            </ul>
                
 </div>
 			<?php include 'footer.php'; ?>
