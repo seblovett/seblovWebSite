@@ -20,7 +20,7 @@
 			  <h3>&nbsp;</h3>
 			</div>
 			<div class="body">
-				<div id="featured">
+				<ul>
 				 <?php
 					$PAGE = 1;
 					if (isset($_REQUEST['page']))
@@ -48,8 +48,8 @@
 					$xslt->importStylesheet( $XSL );
 					print $xslt->transformToXML( $XML );
 				?>
-					
-				</div>
+				</ul>
+				
 </div>
 			<?php include 'footer.php'; ?>
 		</div>
