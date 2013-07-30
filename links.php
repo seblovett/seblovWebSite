@@ -1,5 +1,10 @@
 
-<li><a href="index.php">Home</a></li>
-<li><a href="awards.php">Awards and Achievements</a></li>
-<li><a href="projects.php">Projects</a></li>
-<li><a href="misc.php">Other Things</a></li>
+<?php 
+	function links($relpath = '')
+	{
+		echo '<li><a href="'.$relpath.'index.php">Home</a></li>';
+		echo '<li><a href="'.$relpath.'awards.php">Awards and Achievements</a></li>';
+		echo '<li><a href="'.$relpath.'projects.php">Projects</a></li>';
+		echo '<li><a href="'.$relpath.'misc.php">Other Things</a></li>';
+	}
+?>

@@ -17,7 +17,10 @@
             	<h1  id="title">Projects</h1>
 			  <ul>
               
-		    		<?php include 'links.php'; ?>
+		    		<?php 
+						include 'links.php'; 
+						links();
+					?>
 				</ul>
 			  <h3>&nbsp;</h3>
 			</div>

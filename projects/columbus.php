@@ -19,7 +19,10 @@
 				
 			  	<ul>
 					
-		    		<?php include 'links.php'; ?>
+		    		<?php 
+						include '../links.php'; 
+						links('../');
+					?>
 						
 				</ul>
 			  <h3>&nbsp;</h3>

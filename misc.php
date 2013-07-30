@@ -15,7 +15,10 @@
             	<h1 id="title">Henry Lovett</h1>
 			  <ul>
               
-				   <?php include 'links.php'; ?>
+				   <?php 
+						include 'links.php'; 
+						links();
+					?>
 				</ul>
 			  <h3>&nbsp;</h3>
 			</div>
@@ -24,7 +27,7 @@
 					<h3>Other Things</h3>
                     <p>I will update this page with interesting things I find and maybe some photos that I have taken. </p>
 				</div>
-</div>
+			</div>
 			<?php include 'footer.php'; ?>
 		</div>
 	</body>
