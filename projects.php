@@ -57,7 +57,7 @@
         </ul>        
 </div>
 
-			<?php include 'footer.php'; ?>
+			<?php include 'footer.php'; footer();?>
 		</div>
 	</body>
 </html>  

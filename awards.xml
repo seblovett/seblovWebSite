@@ -3,6 +3,10 @@
 
 <projects>
 	<project>
+		<name>Public Communication Award - University of Southampton</name>
+		<description>The Public Communication Award was given to two students in the third year for a project to be self-standing and for use in recruitment on open days for the University. It came with an award of £1200 and <a href="projects/columbus.php">my robot</a> is used to convince students to come to Southampton. </description>
+	</project>
+	<project>
 		<name>EMECS-thon Best Commercial Implementation</name>
 		<description>
 			The EMECS-thon is a 48 hour embedded system design marathon for students from Southampton University, University of Kaiserslautern and the Norwegian University of Science and Technology to partake in. Teams consisted of three members and the project can be anything within budget and has to use the MBED development board.<br/>

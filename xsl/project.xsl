@@ -112,7 +112,7 @@
 						</xsl:if>
 					</div>
 				</li><br/>
-				<img src="images/separator.jpg"/>
+				<!--<img src="images/separator.jpg"/>-->
 				<xsl:call-template name="Loop">
 					<xsl:with-param name="number" select="$number + 1"/>
 					<xsl:with-param name="endNumber" select="$endNumber"/>

@@ -28,7 +28,7 @@
                     <p>I will update this page with interesting things I find and maybe some photos that I have taken. </p>
 				</div>
 			</div>
-			<?php include 'footer.php'; ?>
+			<?php include 'footer.php'; footer();?>
 		</div>
 	</body>
 </html>  

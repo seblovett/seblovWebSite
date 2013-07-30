@@ -14,7 +14,7 @@
     <body>
         <div class="page">
             <div class="header">
-                <h1 id="title">Awards and Achievements</h1>
+                <h1 id="title">Awards and Achievements </h1>
                 <ul>
                     <?php 
 						include 'links.php'; 
@@ -53,7 +53,8 @@
 						print $xslt->transformToXML( $XML );
 					?>
                 </ul>
-            </div><?php include 'footer.php'; ?>
+            </div>
+			<?php include 'footer.php'; footer();?>
         </div>
     </body>
 </html>

@@ -56,7 +56,7 @@ $sec = "1";
                         </div>
                     </li>
                 </ul>
-            </div><?php include 'footer.php'; ?>
+            </div><?php include 'footer.php'; footer();?>
         </div>
     </body>
 </html>

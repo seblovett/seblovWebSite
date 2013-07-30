@@ -8,6 +8,24 @@
 		<link>projects/website.php</link>
 	</project> 
 	<project>
+		<name>RFID Card Reader</name>
+		<description>I find RFID technology fascinating. We already see it in many places around us (bank cards, bus passes, building access just to name a few) and I wanted to start looking into the technology. This article covers some basic reading and writing a card using a OEM-MIFARE Reader and an mBed development board. This project isn't near complete - I hope to turn it into a USB Device and implement some desktop software. I also hope to look at how RFID works, and how to make a cheap reader for use in other projects. <br/> This project covers using the MIFARE reader / writer. The interface is easy to use and little experience was needed with RFID to get reading data from the card. Use of an internal EEPROM and a slow RS232 communications at 9600 BPS is the MIFARE's main let down. </description>
+		<image>
+			<src>image/mifare.jpg</src>
+			<alt>MIFARE RFID Card Reader Writer</alt>
+		</image>
+		<link></link>
+	</project>
+	<project>
+		<name>Tektronix Scope Hack</name>
+		<description>I have a Tektronix MSO2012 Oscilloscope that I got for my 21st Birthday. The scope itself is extemely good. The UI is easy and the screen is large. Plenty good enough for my uses. One critisism, though, was the need to purchase the extra software. Tektronix offers three add on modules to unlock software features such as I<sup>2</sup>C and SPI decoding and triggering amongst other useful things, which come with a 30 day free trial. After having it for a few days, I began looking into how to unlock these features without the <a href="http://uk.farnell.com/tektronix/dpo2embd/module-embedded-serial-trigger/dp/1665107">£200 price tag</a> that they retail at. <br/> The hack was relitevly simple and required a SIM Card reader and an I<sup>2</sup>C EEPROM. Once the module was build and the EEPROM programmed, the software (well 2/3rds of it) was unlocked. See the link for details on how it was done.</description>
+		<image>
+			<src></src>
+			<alt></alt>
+		</image>
+		<link>projects/TekHack.php</link>
+	</project>
+	<project>
 		<name>Part 3 Project</name>
 		<description>The Part 3 project is an individual project undertaken in the Third year at Southampton University. For my project, I undertook an ambitious project to build an autonomous stereoscopic mapping robot. Though the full specification of the robot was not acheived, the final result was a built robot able to respond to movement. <br/>
 	The Robot used to OV7670 cameras and an AVR32UC3C Microcontroller with an extra 4MB of RAM. The PCB was custom made by <a href="www.pcbcart.com">PCB Cart</a> and is a four layer board.</description>
@@ -17,61 +35,24 @@
 		</image>
 		<link>projects/columbus.php</link>
 	</project>
+	
 	<project>
-		<name>test</name>
+		<name>OV7670 Camera</name>
+		<description></description>
+		<image>
+			<src></src>
+			<alt></alt>
+		</image>
+		<link></link>
 	</project>
-	<project>
-		<name>test</name>
-	</project>
-	<project>
-		<name>test</name>
-	</project>
-	<project>
-		<name>test</name>
-	</project>
-	<project>
-		<name>test</name>
-	</project>
-	<project>
-		<name>test</name>
-	</project>
-	<project>
-		<name>test</name>
-	</project>
-	<project>
-		<name>test</name>
-	</project>
-	<project>
-		<name>test</name>
-	</project>
-	<project>
-		<name>test</name>
-	</project>
-	<project>
-		<name>test</name>
-	</project>
-	<project>
-		<name>test</name>
-	</project>
-	<project>
-		<name>test</name>
-	</project>
-	<project>
-		<name>test</name>
-	</project>
-	<project>
-		<name>test</name>
-	</project>
-	<project>
-		<name>test</name>
-	</project>
-	<project>
-		<name>test</name>
-	</project>
-	<project>
-		<name>test</name>
-	</project>
-	<project>
-		<name>test</name>
-	</project>
+	
+	<!--<project>
+		<name></name>
+		<description></description>
+		<image>
+			<src></src>
+			<alt></alt>
+		</image>
+		<link></link>
+	</project>-->
 </projects>
