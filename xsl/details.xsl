@@ -6,33 +6,41 @@
 	<xsl:template match="/">
 		<xsl:for-each select="//project">
 			<xsl:if test="@id = $id">
-				
+
+				<xsl:choose>
+					<xsl:when test="detail">
+						<xsl:for-each select="detail//section">
+							<div class="body">
+								<ul>
+									<li>
+										<xsl:if test="@image">
+											<div class="featured">
+												<a href="{@image}">
+													<img src="{@image}" width="260px" />
+												</a>
+											</div>
+										</xsl:if>
+										<div>
+											<h3>
+												<xsl:value-of select="@name"/>
+											</h3>
+
+											<xsl:copy-of select="p"/>
+
+										</div>
+									</li>
+								</ul>
+
+							</div>
+						</xsl:for-each>
+					</xsl:when>
+					<xsl:otherwise>
+						Sorry! I have not got around to filling in some details for this project yet. Please return here soon to read more! <br/>Meanwhile, please continue <a href="projects.php">browsing my projects here </a>or go back.
+					</xsl:otherwise>
+				</xsl:choose>
 
 
-				<xsl:for-each select="detail//section">
-					<div class="body">
-						<ul>
-							<li>
-								<xsl:if test="@image">
-									<div class="featured">
-										<a href="{@image}">
-											<img src="{@image}" width="260px" />
-										</a>
-									</div>
-								</xsl:if>
-								<div>
-									<h3>
-										<xsl:value-of select="@name"/>
-									</h3>
-									
-										<xsl:copy-of select="p"/>
-									
-								</div>
-							</li>
-						</ul>
 
-					</div>
-				</xsl:for-each>
 			</xsl:if>
 
 		</xsl:for-each>
