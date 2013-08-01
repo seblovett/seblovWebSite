@@ -261,7 +261,7 @@ body{
 .body ul li div{
 	float:left;
 	margin:0 0 0 50px;
-	width:609px;
+	width:590px;
 	/*background:url(../images/button-more.jpg) no-repeat left bottom;*/
 }
 .body ul li div h3{
@@ -277,7 +277,7 @@ body{
 	font-family: 'RokkittRegular';
 	font-size:14px;
 	color:#5D5D5D;
-	padding:0 0 90px;
+	padding:0 0 50px;
 	margin:0;
 }
 .body ul.paging{
