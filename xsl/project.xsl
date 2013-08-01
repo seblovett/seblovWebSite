@@ -107,8 +107,8 @@
 							<xsl:copy-of select="//project[$number]/description"/>
 						</p>
 						<!-- BUG does not like <iframe ...> tags-->
-						<xsl:if test="//project[$number]/link">
-							<a href="{//project[$number]/link}"><img src="images/link_plus.jpg"/></a>
+						<xsl:if test="//project[$number]/detail">
+							<a href="details.php?id={//project[$number]/@id}"><img src="images/link_plus.jpg"/></a>
 						</xsl:if>
 					</div>
 				</li><br/>
