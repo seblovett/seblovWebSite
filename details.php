@@ -15,32 +15,32 @@
 		<div class="page">
 			<div class="header">
             	<h1  id="title">Projects</h1>
-			  <ul>
+				<ul>
               
 		    		<?php 
 						include 'links.php'; 
 						links();
 					?>
 				</ul>
-			  <h3>&nbsp;</h3>
+			  
 			</div>
 			<div class="body">
 			<ul>			
                 <?php
-					$ID = 0;
-					if (isset($_REQUEST['ID']))
+					$PROJECTID = 1;
+					if (isset($_REQUEST['id']))
 					{
 					  // param was set in the query string
-					   if(empty($_REQUEST['ID']))
+					   if(empty($_REQUEST['id']))
 					   {
 						 // query string had param set to nothing ie ?param=&param2=something
 					   }
 					   else
 					   {
-							$PAGE =   $_GET['ID'];
+							$PROJECTID =   $_GET['id'];
 					   }
 					}
-					//echo $ID;
+					//echo $PROJECTID;
 					# LOAD XML FILE
 					$XML = new DOMDocument();
 					$XML->load('Projects.xml');
@@ -48,7 +48,7 @@
 					# START XSLT
 					$xslt = new XSLTProcessor();
 					$XSL = new DOMDocument();
-					$xslt->setParameter('', 'ID', $ID);
+					$xslt->setParameter('', 'id', $PROJECTID);
 					$XSL->load('xsl/details.xsl');
 					$xslt->importStylesheet( $XSL );
 					print $xslt->transformToXML( $XML );
