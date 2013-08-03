@@ -5,30 +5,58 @@
 	<xsl:variable name="numPerPage">5</xsl:variable>
 	<xsl:template match="/">
 
+		<xsl:choose>
+			<xsl:when test="$page &lt; 0">
+				<li>
+					<xsl:for-each select="//project">
+						<xsl:sort select="name"/>
 
-		
-		<xsl:variable name="startNumber" select="($page - 1) * $numPerPage + 1"/>
+						<div>
+							<h3 class="blog">
+								<xsl:choose>
+								<xsl:when test="detail">
+									<a href="details.php?id={@id}">
+										<xsl:value-of select="name"/>
+										<br/>
+									</a>
+								</xsl:when>
+								<xsl:otherwise><xsl:value-of select="name"/></xsl:otherwise>
+								</xsl:choose>
+							</h3>
 
-		<xsl:variable name="endNum" select="$startNumber + $numPerPage"/>
+						</div>
+
+					</xsl:for-each>
+				</li>
+			</xsl:when>
+
+			<xsl:otherwise>
+				<xsl:variable name="startNumber" select="($page - 1) * $numPerPage + 1"/>
+
+				<xsl:variable name="endNum" select="$startNumber + $numPerPage"/>
 
 
 
-		<xsl:call-template name="Loop">
-			<xsl:with-param name="number" select="$startNumber"/>
-			<xsl:with-param name="endNumber" select="$endNum"/>
-		</xsl:call-template>
-		<br/>
-		<br/>
-		<xsl:call-template name="PageLinks">
-			<xsl:with-param name="endNum" select="$endNum"/>
-			<xsl:with-param name="startNum" select="$startNumber"/>
-		</xsl:call-template>
+				<xsl:call-template name="Loop">
+					<xsl:with-param name="number" select="$startNumber"/>
+					<xsl:with-param name="endNumber" select="$endNum"/>
+				</xsl:call-template>
+				<br/>
+				<br/>
+				<xsl:call-template name="PageLinks">
+					<xsl:with-param name="endNum" select="$endNum"/>
+					<xsl:with-param name="startNum" select="$startNumber"/>
+				</xsl:call-template>
+			</xsl:otherwise>
+		</xsl:choose>
+
+
 
 	</xsl:template>
 	<xsl:template name="PageLinks">
 		<xsl:param name="endNum"/>
 		<xsl:param name="startNum"/>
-		
+
 		<!-- next page previous page links -->
 		<ul class="paging">
 			<xsl:variable name="prevPage">
@@ -44,9 +72,10 @@
 					</a>
 				</li>
 			</xsl:if>
-			
+
 			<xsl:call-template name="PageLoop">
-				<xsl:with-param name="NumPages" select="floor((count(//project)) div 5) + 2"/> <!-- plus 2 as arithmetic is one lower than needed, and loop needs one greater-->
+				<xsl:with-param name="NumPages" select="floor((count(//project)) div 5) + 2"/>
+				<!-- plus 2 as arithmetic is one lower than needed, and loop needs one greater-->
 				<xsl:with-param name="CurPage" select="1"/>
 			</xsl:call-template>
 			<xsl:if test="($page * $numPerPage) &lt; (count(//project)+1)">
@@ -65,19 +94,26 @@
 				</li>
 			</xsl:if>	
 		</ul>
-	
+
 	</xsl:template>
 	<xsl:template name="PageLoop">
 		<xsl:param name="NumPages"/>
-		<xsl:param name="CurPage"/><!-- count for the loop-->
-		
+		<xsl:param name="CurPage"/>
+		<!-- count for the loop-->
+
 		<xsl:if test="$NumPages != $CurPage">
 			<xsl:choose>
 				<xsl:when test="$CurPage = $page">
-					<li><xsl:value-of select="$CurPage"/></li>
+					<li>
+						<xsl:value-of select="$CurPage"/>
+					</li>
 				</xsl:when>
 				<xsl:otherwise>
-					<li><a href="?page={$CurPage}"><xsl:value-of select="$CurPage"/></a></li>
+					<li>
+						<a href="?page={$CurPage}">
+							<xsl:value-of select="$CurPage"/>
+						</a>
+					</li>
 				</xsl:otherwise>
 			</xsl:choose>
 			<xsl:call-template name="PageLoop">
@@ -86,7 +122,7 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-	
+
 	<xsl:template name="Loop">
 		<xsl:param name="number"/>
 		<xsl:param name="endNumber"/>
@@ -108,10 +144,13 @@
 						</p>
 						<!-- BUG does not like <iframe ...> tags-->
 						<xsl:if test="//project[$number]/detail">
-							<a href="details.php?id={//project[$number]/@id}"><img src="images/link_plus.jpg"/></a>
+							<a href="details.php?id={//project[$number]/@id}">
+								<img src="images/link_plus.jpg"/>
+							</a>
 						</xsl:if>
 					</div>
-				</li><br/>
+				</li>
+				<br/>
 				<!--<img src="images/separator.jpg"/>-->
 				<xsl:call-template name="Loop">
 					<xsl:with-param name="number" select="$number + 1"/>
