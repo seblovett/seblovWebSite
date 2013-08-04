@@ -20,7 +20,26 @@
 		    		<?php 
 						include 'links.php'; 
 						links();
+					
+						$PAGE = 1;
+						if (isset($_REQUEST['page']))
+						{
+						  // param was set in the query string
+						   if(empty($_REQUEST['page']))
+						   {
+							 // query string had param set to nothing ie ?param=&param2=something
+						   }
+						   else
+						   {
+								$PAGE =   $_GET['page'];
+						   }
+						}
+						if($PAGE != -1)
+						{
+							echo'<li><a href="projects.php?page=-1">View All</a></li>';
+						}
 					?>
+					
 				</ul>
 			  <h3>&nbsp;</h3>
 			</div>
