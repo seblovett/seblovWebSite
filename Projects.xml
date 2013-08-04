@@ -6,7 +6,7 @@
 	<project id="5">
 		<name>This Website!</name>
 		<description>After doing some projects, I decided to put them online, so I undertook the task of making a website. <br/> Using a template from <a href="http://www.freewebsitetemplates.com">freewebsitetemplates.com</a>, I began creating. The website uses a CSS template as the main style. There are some PHP scripts around as well. This Projects page uses an XML database and a XSLT style sheet to display it and is called from PHP. <br/>The result can be seen around you. It documents all the interesting things about me, from my acheivements to my projects. It is a working progress and I anticipate many changes will be made to this.</description>
-		<link>projects/website.php</link>
+		
 	</project> 
 	<project id="4">
 		<name>RFID Card Reader</name>
@@ -15,16 +15,16 @@
 			<src>images/mifare.jpg</src>
 			<alt>MIFARE RFID Card Reader Writer</alt>
 		</image>
-		<link/>
+		
 	</project>
 	<project id="3">
 		<name>Tektronix Scope Hack</name>
-		<description>I have a Tektronix MSO2012 Oscilloscope that I got for my 21st Birthday. The scope itself is extemely good. The UI is easy and the screen is large. Plenty good enough for my uses. One critisism, though, was the need to purchase the extra software. Tektronix offers three add on modules to unlock software features such as I<sup>2</sup>C and SPI decoding and triggering amongst other useful things, which come with a 30 day free trial. After having it for a few days, I began looking into how to unlock these features without the <a href="http://uk.farnell.com/tektronix/dpo2embd/module-embedded-serial-trigger/dp/1665107">£200 price tag</a> that they retail at. <br/> The hack was relitevly simple and required a SIM Card reader and an I<sup>2</sup>C EEPROM. Once the module was build and the EEPROM programmed, the software (well 2/3rds of it) was unlocked. See the link for details on how it was done.</description>
+		<description>I have a Tektronix MSO2012 Oscilloscope that I got for my 21st Birthday. The scope itself is extemely good. The UI is easy and the screen is large. Plenty good enough for my uses. One critisism, though, was the need to purchase the extra software. Tektronix offers three add on modules to unlock software features such as I<sup>2</sup>C and SPI decoding and triggering, amongst other useful things. These come with a 30 day free trial. After having it for a few days, I began looking into how to unlock these features without the <a href="http://uk.farnell.com/tektronix/dpo2embd/module-embedded-serial-trigger/dp/1665107">£200 price tag</a> that they retail at. <br/> The hack was relitevly simple and required a SIM Card reader and an I<sup>2</sup>C EEPROM. Once the module was build and the EEPROM programmed, the software (well 2/3rds of it) was unlocked. See the link for details on how it was done.</description>
 		<image>
 			<src>images/tek.jpg</src>
 			<alt/>
 		</image>
-		<link>projects/TekHack.php</link>
+		
 	</project>
 	<project id="2">
 		<name>Part 3 Project</name>
@@ -34,7 +34,6 @@
 			<src>images/columbus.JPG</src>
 			<alt>The Columbus Robot</alt>
 		</image>
-		<link>projects/columbus.php</link>
 		<detail>
 			<section name="The Columbus" image="Images/columbus.jpg">
 				<p class="blog">The Part III project is an individual project undertaken by <a href="http://ecs.soton.ac.uk">ECS</a> Students in their third year. It lasts about 7 months and the choice of project is down to the student and supervisor to decide.<br/>
@@ -72,7 +71,7 @@
 			<src></src>
 			<alt></alt>
 		</image>-->
-		<link>projects/ov7670.php</link>
+		
 	</project>
 
 	<!--<project id="0">
@@ -82,7 +81,6 @@
 			<src></src>
 			<alt></alt>
 		</image>
-		<link></link>
 		<detail>
 		<section name="Conclusion">
 			<p class="blog"></p>
