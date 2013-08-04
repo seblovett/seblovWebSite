@@ -59,10 +59,11 @@
 
 		<!-- next page previous page links -->
 		<ul class="paging">
+		
 			<xsl:variable name="prevPage">
 				<xsl:value-of select="$page -1"/>
 			</xsl:variable>
-			<xsl:if test="1 &lt; $page">
+			<xsl:if test="1 &lt; $page"><!-- if not on page one, print previous a first page links -->
 				<li>
 					<a href="?page=1">&lt;&lt;&lt;</a>
 				</li>
@@ -72,13 +73,23 @@
 					</a>
 				</li>
 			</xsl:if>
-
+			<xsl:variable name="NumPages"><!-- this is to calculate the number of page links to print-->
+				<xsl:choose>
+					<xsl:when test="(floor((count(//project)) div $numPerPage) * $numPerPage) &lt; count(//project)"><!-- not an exact multiple of $numPerPage-->
+						<xsl:value-of select="floor((count(//project)) div $numPerPage) + 1"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="floor((count(//project)) div $numPerPage)"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			
+			</xsl:variable>
 			<xsl:call-template name="PageLoop">
-				<xsl:with-param name="NumPages" select="floor((count(//project)) div 5) + 2"/>
-				<!-- plus 2 as arithmetic is one lower than needed, and loop needs one greater-->
-				<xsl:with-param name="CurPage" select="1"/>
+				<xsl:with-param name="NumPages" select="$NumPages"/>
+				
+				<xsl:with-param name="CurPage" select="1"/><!-- not actually current page, just the internal counter -->
 			</xsl:call-template>
-			<xsl:if test="($page * $numPerPage) &lt; (count(//project)+1)">
+			<xsl:if test="($page * $numPerPage) &lt; (count(//project))">
 				<xsl:variable name="nextPage">
 					<xsl:value-of select="$page + 1"/>
 				</xsl:variable>
@@ -101,7 +112,7 @@
 		<xsl:param name="CurPage"/>
 		<!-- count for the loop-->
 
-		<xsl:if test="$NumPages != $CurPage">
+		<xsl:if test="$NumPages &gt; $CurPage - 1">
 			<xsl:choose>
 				<xsl:when test="$CurPage = $page">
 					<li>
@@ -126,7 +137,7 @@
 	<xsl:template name="Loop">
 		<xsl:param name="number"/>
 		<xsl:param name="endNumber"/>
-		<xsl:if test="$number != $endNumber">
+		<xsl:if test="$number != $endNumber ">
 			<xsl:if test="//project[$number]">
 				<li>
 					<xsl:if test="//project[$number]/image">
