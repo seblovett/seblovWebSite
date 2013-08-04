@@ -295,12 +295,12 @@ body{
 	float:left;
 	padding:0 5px;
 	background:none;
+	font-size:12px;
+	font-family: arial;
 }
 .body ul.paging li a{
 	text-decoration:none;
 	color:#ff7e0d;
-	font-family: arial;
-	font-size:12px;
 }
 .body ul.paging li a:hover{
 	color:#5D5D5D;
