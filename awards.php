@@ -21,7 +21,7 @@
 						links();
 					?>
                 </ul>
-                <h3> </h3>
+               
             </div>
             <div class="body">
                 <ul>
