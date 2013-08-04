@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
-<?php
-$page = $_SERVER['PHP_SELF'];
-$sec = "1";
-?>
+
 <html>
     <head>
         <meta name="generator"
@@ -14,7 +11,7 @@ $sec = "1";
         <!--[if IE 7]>
                         <link rel="stylesheet" href="css/ie7.css" type="text/css" />
                 <![endif]-->
-        <meta http-equiv="refresh" content="<?php echo $sec?>;URL=&#39;<?php echo $page?>&#39;" />
+        
     </head>
     <body>
         <div class="page">
@@ -47,12 +44,23 @@ $sec = "1";
                         </div>
                     </li>
                     
-                        <h1>Recent News</h1>
-                    
+                        <h3>Recent News</h3>
+						<li>
+                        <div>
+                            <h3 class="blog">3D Printer Imminent</h3>
+                            <p class="blog">After much deliberation, I have bought a 3D printer. I went for a <a href="http://reprappro.com/products/huxley/">Huxley Rep Rap</a>. It's quite a small printer, but I thought it would suit my needs. I will be posting a project on my experiences with it when I get it!</p>
+                        </div>
+                    </li>
                     <li>
                         <div>
-                            <h3 class="blog">Recent</h3>
-                            <p class="blog">Some</p>
+                            <h3 class="blog">Summer Internship</h3>
+                            <p class="blog">My summer is being spent in Whitely working at Atmel for the second year. This year, I'm working on multiple larger projects. So far, my internship has been enjoyable. I have learnt Python and XSL languages, as well as seeing how a large scale firmware project is maintained.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3 class="blog">End of Third Year!</h3>
+                            <p class="blog">I have just completed my third year at University. I now have a B Eng in Electronic Engineering. The last semesters results ranged from 72-92%. The 92% was in Digital Control System Design as is my highest mark at Uni. I'm very pleased with my result and my hard work has paid off. </p>
                         </div>
                     </li>
                 </ul>
