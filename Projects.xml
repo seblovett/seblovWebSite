@@ -15,7 +15,28 @@
 			<src>images/mifare.jpg</src>
 			<alt>MIFARE RFID Card Reader Writer</alt>
 		</image>
-		
+		<detail>
+			<section name="Intro">
+				<p class="blog">
+					The Mifare Radio-frequency identification (RFID) Read Write Device (RWD) is a cheap £60 device. It is a simple device and offers all the needed functions for basic reading and writing to cards. I bought one of these from <a href="http://uk.farnell.com/rf-solutions/rwd-mifare-oem/mod-mifare-rfid-receiver-antenna/dp/1655512">Farnell</a> and decided to implement it. 
+				</p>
+			</section>
+			<section name="Interface">
+				<p class="blog">
+					The interface to the device is a slow UART protocol at 9600bps. The device can only communicate at the beginning of a Poll cycle which is internally set to between 4ms to 8s. The device has an internal EEPROM to store settings such as the poll time, access keys, UID table and output settings. <br/>The protocol to communicate is straight forward. UART protocols are inexpensive in code, but the addition of a Clear-To-Send signal requires an interrupt as well. The <a href="http://docs-europe.electrocomponents.com/webdocs/0e92/0900766b80e9297f.pdf">datasheet</a> lists in detail the commands. Using the UART protocol, bytes are thrown at the device, and data is returned if requested, along with an Acknowledge byte. 
+				</p>
+			</section>
+			<section name="Implementation">
+				<p class="blog">
+					The system was fairly easy to implement. I used a mBed board and a serial connection to a computer to realise this project. All the read and write functions, UID read, key setting etc. functions are implemented for Mifare 1k and 4k cards. The interface isn't ideal. The next steps for this project is to implement it as a USB device, probably using an AVR, and write a desktop application with a GUI to interpret the output data. I may also try making my own reader to make this a cheap option to include in other projects. <br/>My code can be <a href="https://mbed.org/users/seblovett/code/MifareRFIDReaderWriter/">found here</a> It started out as an example from ARM for the communications and a method to read the UID of a card. I then expanded it to read and write blocks, set access keys and settings.
+				</p>
+			</section>
+			<section name="Conclusion">
+				<p class="blog">
+					I enjoyed my introduction to RFID. I hope this isn't my last insight into the technology as I find it interesting. I want to make my own reader and also look into card emulation on an NFC enabled device so you don't have to carry around all your cards, and it adds security as they can be turned off. All for the future though!
+				</p>
+			</section>
+		</detail>
 	</project>
 	<project id="3">
 		<name>Tektronix Scope Hack</name>
