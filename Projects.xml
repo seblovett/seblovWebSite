@@ -6,7 +6,23 @@
 	<project id="5">
 		<name>This Website!</name>
 		<description>After doing some projects, I decided to put them online, so I undertook the task of making a website. <br/> Using a template from <a href="http://www.freewebsitetemplates.com">freewebsitetemplates.com</a>, I began creating. The website uses a CSS template as the main style. There are some PHP scripts around as well. This Projects page uses an XML database and a XSLT style sheet to display it and is called from PHP. <br/>The result can be seen around you. It documents all the interesting things about me, from my acheivements to my projects. It is a working progress and I anticipate many changes will be made to this.</description>
-		
+		<detail>
+			<section name="Introduction"><p class="blog">
+				I decided to make this website as a central hub for things I have done. It's an online summary of me - who I am, what I've done, and will hopefully contain some interesting and useful information. I don't know how popular it will be, but I wanted my own small corner on the internet to put things I'm passionate about on. This page is about how I made this site: from the style to the content. 
+			</p></section>
+			<section name="Style"><p class="blog">
+				The Cascading Style Sheet (CSS) is a way to apply a set of rules on multiple HTML pages. I will confess - I didn't write the current CSS template (as on 5th August 2013). It was used from <a href="http://www.freewebsitetemplates.com">freewebsitetemplates.com</a>, who provide many free templates. I do eventually want to write my own to give a personal style, but this will suffice for version 1 of my website. I have added a few styles to the template, so it's not 100% borrowed.
+			</p></section>
+			<section name="Content"><p class="blog">
+				This site is pretty much a blog. The original site I started with was all hard-coded HTML. I wanted something a little more intuitive than this as manually creating pages didn't seem too fun. <br/>To do this, the Awards and Projects pages use an XML file for the content. A PHP script with-in the page calls a XSLT file (which is a 'script' to parse XML to HTML), passing a page number parameter to it.<br/>The Projects (and awards) XML is a collection of <i>project</i> elements. Within this, the name, breif description and detail are all written. The XSL then formats the data is a blog like fashion. If detail exists, a link is made to direct to the details page.<br/>The XSL takes this XML, along with the page you are on. It calculates the start and end points and prints the correct number of projects. If detail exists, then a link is placed. The page links are also constructed from the XSL. By referencing page -1, the XSL will print a full list of the projects in alphabetical order. This is access by a link at the top of the page. <br/>The details page (which you are on now), uses the same XML but a different XSL. The project ID is passed and the relevant project detail is printed out. This saves having to have an individual page per project, but will ultimately end up with a large XML file. Images and other HTML elements can also be added. <br/>The system is hardly amazing. A better (but more costly) way would be to use a SQL database. Maybe one day I'll change to this.
+			</p></section>
+			<section name="Basic Page"><p class="blog">
+				Even having a handful of pages, it can be difficult to keep all the common hyperlinks correct. I got around this by making some PHP functions in an external file. Each page will read this file and call the function. A relative path can be passed to append the hyperlinks if the page resides in a different folder. I have found this to be effective and simple. Changing the link to a page requires only one modification. <br/>The index page is static (though the recent news section may go the way as the projects in the future).
+			</p></section>
+			<section name="Conclusion"><p class="blog">
+				Most of what I have learnt has been self taught. My XSL / XML skills I learnt whilst working at <a href="www.atmel.com">Atmel</a> in the summer of 2013. PHP was used briefly for this project, but it isn't anything amazing. Most of the labourious work is done by the XSL and the PHP just calls the XSL. This site has been enjoyable to build. It's an area I have never experienced before and hopefully I will continue to develop it and keep it up to date with what I am doing. 
+			</p></section>
+		</detail>
 	</project> 
 	<project id="4">
 		<name>RFID Card Reader</name>
