@@ -73,6 +73,7 @@
 					</a>
 				</li>
 			</xsl:if>
+
 			<xsl:variable name="NumPages"><!-- this is to calculate the number of page links to print-->
 				<xsl:choose>
 					<xsl:when test="(floor((count(//project)) div $numPerPage) * $numPerPage) &lt; count(//project)"><!-- not an exact multiple of $numPerPage-->
@@ -88,6 +89,7 @@
 				<xsl:with-param name="NumPages" select="$NumPages"/>
 				
 				<xsl:with-param name="CurPage" select="1"/><!-- not actually current page, just the internal counter -->
+
 			</xsl:call-template>
 			<xsl:if test="($page * $numPerPage) &lt; (count(//project))">
 				<xsl:variable name="nextPage">
@@ -112,7 +114,9 @@
 		<xsl:param name="CurPage"/>
 		<!-- count for the loop-->
 
+
 		<xsl:if test="$NumPages &gt; $CurPage - 1">
+
 			<xsl:choose>
 				<xsl:when test="$CurPage = $page">
 					<li>
