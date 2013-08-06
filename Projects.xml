@@ -69,15 +69,20 @@
 			</section>
 			<section name="Circuit" image="Images/scopeCD.png">
 				<p class="blog">
-					The circuit itself if very simple. The I2C EEPROM is connected to a SIM Card connector. With this EEPROM, the address select pins are not connected. This is because the I2C Address is used to select the page internally. With smaller EEPROMs, the address is hard coded using these pins (usually changing the last 3 bits of the address). The EEPROM used has 2 bits in the address and a full byte, giving 10 address bits for a total of 1024 addresses. I hope to give an explanation in the future on I2C Protocols. Once the cicruit was built, the EEPROM was programmed with the following data at the given addresses:
+					The circuit itself if very simple. The I2C EEPROM is connected to a SIM Card connector. With this EEPROM, the address select pins are not connected. This is because the I2C Address is used to select the page internally. With smaller EEPROMs, the address is hard coded using these pins (usually changing the last 3 bits of the address). The EEPROM used has 2 bits in the address and a full byte, giving 10 address bits for a total of 1024 addresses. I hope to give an explanation in the future on I2C Protocols. Once the cicruit was built, the EEPROM was programmed with the following data at the given addresses in the table below.
+					</p>
+					<p class="blog">Another feature can also be unlocked - the "DPO2AUTO" module. Tektronix only allows for two modules to be unlocked at any one time (there are only two slots for modules!). If you want this module instead, substitute the relevant data in for one. The data can actually be placed on any 256 byte boundary (0x000, 0x100, 0x200, 0x300) as the scope will read at each address for the data, but take the first two found.
+				</p>
+			</section>
+			<section name="Data">
+				<p class="blog">
 					<table border="1"><tr><th>Address</th><th>Data (Hex)</th><th>Data (ASCII)</th></tr>
 						<tr>
 							<td>0x000</td><td>0xFF 0xFF 0xFF 0xFF 0x44 0x50 0x4F 0x32 0x43 0x4F 0x4D 0x50 0x00 0xFF 0xFF 0xFF</td><td>0xFF 0xFF 0xFF 0xFF 'D' 'P' 'O' '2' 'C' 'O' 'M' 'P' 0x00 0xFF 0xFF 0xFF</td></tr><tr>
 							<td>0x200</td><td>0xFF 0xFF 0xFF 0xFF 0x44 0x50 0x4F 0x32 0x45 0x4D 0x42 0x44 0x00 0xFF 0xFF 0xFF</td><td>0xFF 0xFF 0xFF 0xFF 'D' 'P' 'O' '2' 'E' M' 'B' 'D' 0x00 0xFF 0xFF 0xFF</td>
 							
 						</tr>
-					</table></p>
-					<br/><p class="blog">Another feature can also be unlocked - the "DPO2AUTO" module. Tektronix only allows for two modules to be unlocked at any one time (there are only two slots for modules!). If you want this module instead, substitute the relevant data in for one. The data can actually be placed on any 256 byte boundary (0x000, 0x100, 0x200, 0x300) as the scope will read at each address for the data, but take the first two found.
+					</table>
 				</p>
 			</section>
 			<section name="Building" image="Images/tek.jpg">

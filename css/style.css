@@ -288,6 +288,18 @@ body{
 	padding:0 0 50px;
 	margin:0;
 }
+.body ul li div table{
+	font-size:12px;
+	color:#5D5D5D;
+	border:0px;
+	border-collapse: collapse;
+}
+.body ul li div table th{
+	padding:10px;
+}
+.body ul li div table td{
+	padding:10px;
+}
 .body ul.paging{
 	margin:15px 0 10px 210px;
 }
