@@ -9,7 +9,7 @@
 
 				<xsl:choose>
 					<xsl:when test="detail">
-						<xsl:for-each select="detail//section">
+						<!--<xsl:for-each select="detail//section">
 							<div class="body">
 								<ul>
 									<li>
@@ -32,10 +32,12 @@
 								</ul>
 
 							</div>
-						</xsl:for-each>
+						</xsl:for-each>-->
+						<xsl:copy-of select="detail"/>
 					</xsl:when>
 					<xsl:otherwise>
-						Sorry! I have not got around to filling in some details for this project yet. Please return here soon to read more! <br/>Meanwhile, please continue <a href="projects.php">browsing my projects here </a>or go back.
+						<div class="body"><ul><li><div><h3>Sorry!</h3><p class="blog">Sorry! I have not got around to filling in some details for this project yet. Please return here soon to read more! <br/>Meanwhile, please continue <a href="projects.php">browsing my projects here </a>or go back.</p></div></li></ul></div>
+						
 					</xsl:otherwise>
 				</xsl:choose>
 
