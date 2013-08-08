@@ -152,7 +152,7 @@
 					</xsl:if>
 					<div>
 						<h3>
-							<xsl:value-of select="//project[$number]/name"/>
+							<xsl:value-of select="//project[$number]/name"/> <xsl:if test="//project[$number]/date"> : <xsl:value-of select="//project[$number]/date"/></xsl:if>
 						</h3>
 						<p>
 							<xsl:copy-of select="//project[$number]/description"/>
