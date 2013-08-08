@@ -2,26 +2,66 @@
 <?xml-stylesheet type="text/xsl" href="xsl/project.xsl"?>
 
 <projects>
-	
+
 	<project id="5">
 		<name>This Website!</name>
 		<description>After doing some projects, I decided to put them online, so I undertook the task of making a website. <br/> Using a template from <a href="http://www.freewebsitetemplates.com">freewebsitetemplates.com</a>, I began creating. The website uses a CSS template as the main style. There are some PHP scripts around as well. This Projects page uses an XML database and a XSLT style sheet to display it and is called from PHP. <br/>The result can be seen around you. It documents all the interesting things about me, from my acheivements to my projects. It is a working progress and I anticipate many changes will be made to this.</description>
 		<detail>
-			<section name="Introduction"><p class="blog">
+			<div class="body">
+				<ul>
+					<li>
+						<div>
+							<h3>Introduction</h3><p class="blog">
 				I decided to make this website as a central hub for things I have done. It's an online summary of me - who I am, what I've done, and will hopefully contain some interesting and useful information. I don't know how popular it will be, but I wanted my own small corner on the internet to put things I'm passionate about on. This page is about how I made this site: from the style to the content. 
-			</p></section>
-			<section name="Style"><p class="blog">
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="body">
+				<ul>
+					<li>
+						<div>
+							<h3>Style</h3><p class="blog">
 				The Cascading Style Sheet (CSS) is a way to apply a set of rules on multiple HTML pages. I will confess - I didn't write the current CSS template (as on 5th August 2013). It was used from <a href="http://www.freewebsitetemplates.com">freewebsitetemplates.com</a>, who provide many free templates. I do eventually want to write my own to give a personal style, but this will suffice for version 1 of my website. I have added a few styles to the template, so it's not 100% borrowed.
-			</p></section>
-			<section name="Content"><p class="blog">
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="body">
+				<ul>
+					<li>
+						<div>
+							<h3>Content</h3><p class="blog">
 				This site is pretty much a blog. The original site I started with was all hard-coded HTML. I wanted something a little more intuitive than this as manually creating pages didn't seem too fun. <br/>To do this, the Awards and Projects pages use an XML file for the content. A PHP script with-in the page calls a XSLT file (which is a 'script' to parse XML to HTML), passing a page number parameter to it.<br/>The Projects (and awards) XML is a collection of <i>project</i> elements. Within this, the name, breif description and detail are all written. The XSL then formats the data is a blog like fashion. If detail exists, a link is made to direct to the details page.<br/>The XSL takes this XML, along with the page you are on. It calculates the start and end points and prints the correct number of projects. If detail exists, then a link is placed. The page links are also constructed from the XSL. By referencing page -1, the XSL will print a full list of the projects in alphabetical order. This is access by a link at the top of the page. <br/>The details page (which you are on now), uses the same XML but a different XSL. The project ID is passed and the relevant project detail is printed out. This saves having to have an individual page per project, but will ultimately end up with a large XML file. Images and other HTML elements can also be added. <br/>The system is hardly amazing. A better (but more costly) way would be to use a SQL database. Maybe one day I'll change to this.
-			</p></section>
-			<section name="Basic Page"><p class="blog">
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="body">
+				<ul>
+					<li>
+						<div>
+							<h3>Basic Page</h3><p class="blog">
 				Even having a handful of pages, it can be difficult to keep all the common hyperlinks correct. I got around this by making some PHP functions in an external file. Each page will read this file and call the function. A relative path can be passed to append the hyperlinks if the page resides in a different folder. I have found this to be effective and simple. Changing the link to a page requires only one modification. <br/>The index page is static (though the recent news section may go the way as the projects in the future).
-			</p></section>
-			<section name="Conclusion"><p class="blog">
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="body">
+				<ul>
+					<li>
+						<div>
+							<h3>Conclusion</h3><p class="blog">
 				Most of what I have learnt has been self taught. My XSL / XML skills I learnt whilst working at <a href="www.atmel.com">Atmel</a> in the summer of 2013. PHP was used briefly for this project, but it isn't anything amazing. Most of the labourious work is done by the XSL and the PHP just calls the XSL. This site has been enjoyable to build. It's an area I have never experienced before and hopefully I will continue to develop it and keep it up to date with what I am doing. 
-			</p></section>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</detail>
 	</project> 
 	<project id="4">
@@ -32,26 +72,50 @@
 			<alt>MIFARE RFID Card Reader Writer</alt>
 		</image>
 		<detail>
-			<section name="Intro">
-				<p class="blog">
+			<div class="body">
+				<ul>
+					<li>
+						<div>
+							<h3>Intro</h3><p class="blog">
 					The Mifare Radio-frequency identification (RFID) Read Write Device (RWD) is a cheap £60 device. It is a simple device and offers all the needed functions for basic reading and writing to cards. I bought one of these from <a href="http://uk.farnell.com/rf-solutions/rwd-mifare-oem/mod-mifare-rfid-receiver-antenna/dp/1655512">Farnell</a> and decided to implement it. 
-				</p>
-			</section>
-			<section name="Interface">
-				<p class="blog">
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="body">
+				<ul>
+					<li>
+						<div>
+							<h3>Interface</h3><p class="blog">
 					The interface to the device is a slow UART protocol at 9600bps. The device can only communicate at the beginning of a Poll cycle which is internally set to between 4ms to 8s. The device has an internal EEPROM to store settings such as the poll time, access keys, UID table and output settings. <br/>The protocol to communicate is straight forward. UART protocols are inexpensive in code, but the addition of a Clear-To-Send signal requires an interrupt as well. The <a href="http://docs-europe.electrocomponents.com/webdocs/0e92/0900766b80e9297f.pdf">datasheet</a> lists in detail the commands. Using the UART protocol, bytes are thrown at the device, and data is returned if requested, along with an Acknowledge byte. 
-				</p>
-			</section>
-			<section name="Implementation">
-				<p class="blog">
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="body">
+				<ul>
+					<li>
+						<div>
+							<h3>Implementation</h3><p class="blog">
 					The system was fairly easy to implement. I used a mBed board and a serial connection to a computer to realise this project. All the read and write functions, UID read, key setting etc. functions are implemented for Mifare 1k and 4k cards. The interface isn't ideal. The next steps for this project is to implement it as a USB device, probably using an AVR, and write a desktop application with a GUI to interpret the output data. I may also try making my own reader to make this a cheap option to include in other projects. <br/>My code can be <a href="https://mbed.org/users/seblovett/code/MifareRFIDReaderWriter/">found here</a> It started out as an example from ARM for the communications and a method to read the UID of a card. I then expanded it to read and write blocks, set access keys and settings.
-				</p>
-			</section>
-			<section name="Conclusion">
-				<p class="blog">
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="body">
+				<ul>
+					<li>
+						<div>
+							<h3>Conclusion</h3><p class="blog">
 					I enjoyed my introduction to RFID. I hope this isn't my last insight into the technology as I find it interesting. I want to make my own reader and also look into card emulation on an NFC enabled device so you don't have to carry around all your cards, and it adds security as they can be turned off. All for the future though!
-				</p>
-			</section>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</detail>
 	</project>
 	<project id="3">
@@ -62,41 +126,96 @@
 			<alt/>
 		</image>
 		<detail>
-			<section name="Intro">
-				<p class="blog">
+			<div class="body">
+				<ul>
+					<li>
+						<div>
+							<h3>Intro</h3>
+							<p class="blog">
 					The original idea for this was outlined <a href="http://translate.google.com/translate?js=n&amp;prev=_t&amp;hl=en&amp;ie=UTF-8&amp;layout=2&amp;eotf=1&amp;sl=de&amp;tl=en&amp;u=http%3A%2F%2Fherzogmuehlweg.de%2FTDS3UAM%2FTDS3UAM.html">here</a>. Daniel Wee then also explained in more detail <a href="http://forum.tsebi.com/viewtopic.php?f=4&amp;t=113">in this forum.</a> I decided to have a go at doing this myself to get the software unlocked. <br/> My first approach was using a large I<sup>2</sup>C EEPROM that I had kicking around, which was addressed by 2 bytes, as opposed to the suggested EEPROM. This didn't work, yeilding no results. Instead of being cheap, I splashed out on a MICROCHIP 24LC08 8K EEPROM.  
-				</p>
-			</section>
-			<section name="Circuit" image="Images/scopeCD.png">
-				<p class="blog">
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="body">
+				<ul>
+					<li>
+						<div>
+							<h3>Circuit</h3>
+							<br/>
+							<img src="Images/scopeCD.png" alt="Circuit Diagram of the Tek Scope Hack"/>
+							<br/>
+							<br/>
+							<br/>
+							<p class="blog">
 					The circuit itself if very simple. The I2C EEPROM is connected to a SIM Card connector. With this EEPROM, the address select pins are not connected. This is because the I2C Address is used to select the page internally. With smaller EEPROMs, the address is hard coded using these pins (usually changing the last 3 bits of the address). The EEPROM used has 2 bits in the address and a full byte, giving 10 address bits for a total of 1024 addresses. I hope to give an explanation in the future on I2C Protocols. Once the cicruit was built, the EEPROM was programmed with the following data at the given addresses in the table below.
-					</p>
-					<p class="blog">Another feature can also be unlocked - the "DPO2AUTO" module. Tektronix only allows for two modules to be unlocked at any one time (there are only two slots for modules!). If you want this module instead, substitute the relevant data in for one. The data can actually be placed on any 256 byte boundary (0x000, 0x100, 0x200, 0x300) as the scope will read at each address for the data, but take the first two found.
-				</p>
-			</section>
-			<section name="Data">
-				<p class="blog">
-					<table border="1"><tr><th>Address</th><th>Data (Hex)</th><th>Data (ASCII)</th></tr>
-						<tr>
-							<td>0x000</td><td>0xFF 0xFF 0xFF 0xFF 0x44 0x50 0x4F 0x32 0x43 0x4F 0x4D 0x50 0x00 0xFF 0xFF 0xFF</td><td>0xFF 0xFF 0xFF 0xFF 'D' 'P' 'O' '2' 'C' 'O' 'M' 'P' 0x00 0xFF 0xFF 0xFF</td></tr><tr>
-							<td>0x200</td><td>0xFF 0xFF 0xFF 0xFF 0x44 0x50 0x4F 0x32 0x45 0x4D 0x42 0x44 0x00 0xFF 0xFF 0xFF</td><td>0xFF 0xFF 0xFF 0xFF 'D' 'P' 'O' '2' 'E' M' 'B' 'D' 0x00 0xFF 0xFF 0xFF</td>
-							
-						</tr>
-					</table>
-				</p>
-			</section>
-			<section name="Building" image="Images/tek.jpg">
-				<p class="blog">
+							</p><p class="blog">Another feature can also be unlocked - the "DPO2AUTO" module. Tektronix only allows for two modules to be unlocked at any one time (there are only two slots for modules!). If you want this module instead, substitute the relevant data in for one. The data can actually be placed on any 256 byte boundary (0x000, 0x100, 0x200, 0x300) as the scope will read at each address for the data, but take the first two found.
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="body">
+				<ul>
+					<li>
+						<div>
+							<h3>Data</h3><p class="blog">
+								<table border="1">
+									<tr>
+										<th>Address</th>
+										<th>Data (Hex)</th>
+										<th>Data (ASCII)</th>
+									</tr>
+									<tr>
+										<td>0x000</td>
+										<td>0xFF 0xFF 0xFF 0xFF 0x44 0x50 0x4F 0x32 0x43 0x4F 0x4D 0x50 0x00 0xFF 0xFF 0xFF</td>
+										<td>0xFF 0xFF 0xFF 0xFF 'D' 'P' 'O' '2' 'C' 'O' 'M' 'P' 0x00 0xFF 0xFF 0xFF</td>
+									</tr>
+									<tr>
+										<td>0x200</td>
+										<td>0xFF 0xFF 0xFF 0xFF 0x44 0x50 0x4F 0x32 0x45 0x4D 0x42 0x44 0x00 0xFF 0xFF 0xFF</td>
+										<td>0xFF 0xFF 0xFF 0xFF 'D' 'P' 'O' '2' 'E' M' 'B' 'D' 0x00 0xFF 0xFF 0xFF</td>
+
+									</tr>
+								</table>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="body">
+				<ul>
+					<li>
+						<div class="featured">
+							<a href="Images/tek.jpg">
+								<img src="Images/tek.jpg" width="260px"/>
+							</a>
+						</div>
+						<div>
+							<h3>Building</h3><p class="blog">
 					I built this on veriboard. The SIM reader was soldered first towards the far edge. The chip was a TSSOP8 package. I had to cut a track in half carefully to ensure the pins did not join together. The two parts were then connected using enamled wire. A fiddly process, but resulted in no large wires. An extra veriboard was glued to the back to pad the device so it fit snugly in the port. The wires were sanwhiched between the two layers for protections.
-				</p>
-			</section>
-			<section name="Results" image="Images/TekProof.png">
-				<p class="blog">
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="body">
+				<ul>
+					<li>
+
+						<div>
+							<h3>Results</h3><p class="blog">
 					This project was a resounding success. Though only two modules can be unlocked at any one time, that's two more than I would have had. The image is proof that I have them unlocked. My next steps for this would be to either make a device to program the stick quickly, or make another, potentially designing a PCB for it too. 
-				</p>
-			</section>
-			
+							</p>
+							<img src="Images/TekProof.png" />
+						</div>
+					</li>
+				</ul>
+			</div>
 		</detail>
+
+
 	</project>
 	<project id="2">
 		<name>Part III Project</name>
@@ -107,31 +226,68 @@
 			<alt>The Columbus Robot</alt>
 		</image>
 		<detail>
-			<section name="The Columbus" image="Images/columbus.jpg">
-				<p class="blog">The Part III project is an individual project undertaken by <a href="http://ecs.soton.ac.uk">ECS</a> Students in their third year. It lasts about 7 months and the choice of project is down to the student and supervisor to decide.<br/>
-					<br/>For my project, I undertook an ambitious task to design, build and test a Stereoscopic Mapping robot. The idea was to build up a 2D floor plan of an unknown area by using two cameras to measure distance. <br/>
-					<br/>Though the end application was never acheived, all the basic functions were implemented. The image processing side of the project were all prototyped in Matlab. The cameras were deemed unsuitable for accurate depth measurement, but the system could easily perceive depth from the setup. <br/>
-					<br/> For my hard work over 7 months, I acheived a mark of 76% for my project.</p>
-			</section>
-			<section name="The Hardware" image="Images/PCB_Top.jpg">
-				<p class="blog">The microcontroller used was a UC3C 32bit AVR. It controlled all aspects of the robot, including motor driving, data storage on to an SD card, image capturing, and also had 4MB of SDRAM on a DMA EBI interface (DMA - Direct Memory Access, EBI - External Bus Interface). The cameras were Omnivision OV7670's. The camera can deliver VGA format pictures. See <a href="ov7670.php">this project of mine</a> for more information on the camera.<br/>
-					<br/>
+			<div class="body">
+				<ul>
+					<li>
+						<div class="featured">
+							<a href="Images/columbus.jpg">
+								<img src="Images/columbus.jpg" width="260px"/>
+							</a>
+						</div>
+						<div>
+							<h3>The Columbus</h3><p class="blog">The Part III project is an individual project undertaken by <a href="http://ecs.soton.ac.uk">ECS</a> Students in their third year. It lasts about 7 months and the choice of project is down to the student and supervisor to decide.<br/>
+								<br/>For my project, I undertook an ambitious task to design, build and test a Stereoscopic Mapping robot. The idea was to build up a 2D floor plan of an unknown area by using two cameras to measure distance. <br/>
+								<br/>Though the end application was never acheived, all the basic functions were implemented. The image processing side of the project were all prototyped in Matlab. The cameras were deemed unsuitable for accurate depth measurement, but the system could easily perceive depth from the setup. <br/>
+								<br/> For my hard work over 7 months, I acheived a mark of 76% for my project.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="body">
+				<ul>
+					<li>
+						<div class="featured">
+							<a href="Images/PCB_Top.jpg">
+								<img src="Images/PCB_Top.jpg" width="260px"/>
+							</a>
+						</div>
+						<div>
+							<h3>The Hardware</h3><p class="blog">The microcontroller used was a UC3C 32bit AVR. It controlled all aspects of the robot, including motor driving, data storage on to an SD card, image capturing, and also had 4MB of SDRAM on a DMA EBI interface (DMA - Direct Memory Access, EBI - External Bus Interface). The cameras were Omnivision OV7670's. The camera can deliver VGA format pictures. See <a href="ov7670.php">this project of mine</a> for more information on the camera.<br/>
+								<br/>
 					The PCB was designed as a part of the project. It was a four layer board, with track sizes as small as 6mils. Only a few faults were found, none of which were fatal (only really footprint sizes and using incorrect interrupt pins on the MCU), and given that it was the first PCB I had designed, I ruled this a resounding success. It took an entire day to assemble by hand.<br/>
-					<br/>
+								<br/>
 					A four layer board was used for ease of design. The centre two layers were +3V3 and Ground Planes, meaning any device that needed power and ground did not need any tracks routing, only a via. <br/>
-					<br/>
+								<br/>
 					Creating this board was a new an interesting experience. Being my first PCB, it wasn't the easiest. I hope this won't be the last I design, but PCB manufacturing has been put well out of the hobbyist's reach. I hope to make a small PCB milling machine to create some at home.</p>
-			</section>
-			<section name="The Software">
-				<p class="blog">A large part of the software was for Image Processing. The main aspect looked at in the project was image matching in stereo pairs. This could then be used to determine the distance to an object in view. The Fourier Transform was also looked into in detail and a 2D FFT was implemented on the AVR. All image processing code was prototyped in Matlab. <br/>
-					<br/>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="body">
+				<ul>
+					<li>
+						<div>
+							<h3>The Software</h3><p class="blog">A large part of the software was for Image Processing. The main aspect looked at in the project was image matching in stereo pairs. This could then be used to determine the distance to an object in view. The Fourier Transform was also looked into in detail and a 2D FFT was implemented on the AVR. All image processing code was prototyped in Matlab. <br/>
+								<br/>
 						The firmware on the AVR was a large portion of the project too. This controlled the camera, motors, SD card and RAM access. The Atmel Software framework provided drivers for the RAM and SD card. The images obtained from the camera were able to be written to the SD card as a bitmap image. Motor driving could be acheived to around 1cm accuracy. This system used an optosensor to detect movement of the wheels.</p>
-			</section>
-			<section name="Conclusion">
-				<p class="blog">I learnt a lot from this project - from PCB design to not being too over ambitious. I felt a bit disapointed in myself not completing the task I set out to do, even though it was majorly ambitious. However, to the end of the project, I was offered a silver lining. The University was after projects to use an demonstrations. I was put forward for this opportunity and was given motivation to make my robot useful. The application decided on was to make my robot respond to movement. By subtracting sequential images, areas of movement can be seen. This is then translated to find the place of most movement and the robot will rotate towards the most movement. This was completed mid June 2013 and should be used in open days at Southampton University. <br/>
-					<br/>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="body">
+				<ul>
+					<li>
+						<div>
+							<h3>Conclusion</h3><p class="blog">I learnt a lot from this project - from PCB design to not being too over ambitious. I felt a bit disapointed in myself not completing the task I set out to do, even though it was majorly ambitious. However, to the end of the project, I was offered a silver lining. The University was after projects to use an demonstrations. I was put forward for this opportunity and was given motivation to make my robot useful. The application decided on was to make my robot respond to movement. By subtracting sequential images, areas of movement can be seen. This is then translated to find the place of most movement and the robot will rotate towards the most movement. This was completed mid June 2013 and should be used in open days at Southampton University. <br/>
+								<br/>
 						This final part, though nothing to do with my marks, gave me chance to finish what I started, of which otherwise I would never have done. My project was a tough experience, but something I can look back on with pride.</p>
-			</section>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+
+
 		</detail>
 	</project>
 
@@ -143,20 +299,86 @@
 			<src></src>
 			<alt></alt>
 		</image>-->
-		
+		<detail>
+			<div class="body">
+				<ul>
+					<li>
+						<div>
+							<h3>The Camera</h3>
+							<p class="blog">The OV7670 is a cheap digital camera able to produce VGA sized (640px x 420px) images in YUV or RGB format. The device is packaged as a Ball Grid Array (BGA) so the PCB breakout board is vital. As well as all the passives and clocks needed, the board has a small lens and a First In First Out (FIFO) buffer. This is so that the device can be used on low speed devices. The FIFO buffer writing is controlled by the camera. The enable and reset is controlled by the user.</p>
+							<a href="Images/OV7670/Schematic.jpg"><img src="./Images/OV7670/Schematic.jpg" width="100%"/></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="body">
+				<ul>
+					<li>
+						<div>
+							<h3>PCB Error</h3>
+							<p class="blog">In my second year, we were given this camera during a design exercise, but we were all defeated by it. In the two week in the labs, students were experiencing odd behaviour. </p>
+							<p>After much annoyance, it became apparent that there was a PCB fault on the device. Pin 8 of the FIFO buffer, the Write Reset, was connected to another pin (the exact fault escapes me) which caused the buffer to clear it's own memory. </p>
+							<p>To solve this, Pin 8 of the buffer can be lifted from the board, and connected to Pin 5 of the header, which is also disconnected from the board. Once this is done, the camera should be fairly straight forward!</p>
+							<a href="Images/OV7670/modification.jpg"><img src="./Images/OV7670/modification.jpg" width="50%"/></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="body">
+				<ul>
+					<li>
+						<div>
+							<h3>Operation</h3>
+							<p class="blog">The camera uses a SCCB Interface created by OmniVision. This is almost identical to the $I^{2}C$ Interface by and the two protocols are compatible. The original code for the camera used a software driven SCCB interface which was very slow and used up processing time. This was changed to make use of the built-in interrupt-driven I<sup>2</sup>C interface. This communication bus is used to write to the control registers of the camera to set up the signals, image format and image size. The set-up procedure also contains an odd few commands to reserved registers and a odd end sequence. I do not understand why this is so, but it makes the camera work.</p>
+							
+							<p>The OV7670 is set up so that the VSYNC pin goes low at the beginning of every frame of data, and HREF is high when the output data is valid. The pixel data is then clocked out on every rising edge of PCLK. To control the buffer, WEN is logically NAND with the HREF signal. When both are high, the WEN to the buffer is active and the data will be clocked into the buffer by the camera. </p>
+
+							<p>In order to store a full image into the buffer, WEN must be high between two consecutive VSYNC pulses. VSYNC is set up to interrupt the AVR, and a small state machine is implemented to count VSYNC pulses and control WEN correctly. After the WEN signal is pulsed, the FIFO buffer will contain all the valid pixel data.</p>
+
+							<p>To obtain the image data from the FIFO buffer, the AVR sets output enable low and pulses the read clock. Valid data is available on the data port while RCLK is high. All the data is then read 8 bits at a time. The endianness of the data is set in the camera registers.</p>
+
+							<p>After the data is been read, the buffer is reset by asserting the read reset (RRST) and write reset (WRST) signals for at least one clock cycle of RCLK or PCLK respectively.</p>
+							<p>The following is a capture from my Scope showing all this in a waveform.</p>
+							<img src="./Images/OV7670/signals.png"/>
+							
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="body">
+				<ul>
+					<li>
+						<div>
+							<h3>Implementation</h3>
+							<p class="blog">An atMega644P was used to implement the code. The device has very limited RAM - 153kB were needed for one full QVGA image (320x240px) but the microcontroller only has 4kB. To solve this, an SD card for external memory was used. The FAT-FS library provided a good stable implementation with little modifications needed. From here, a Bitmap image could be written. </p><p>Bitmap was chosen as it required no compression, which doesn't matter at the size of the images being written. I used an old header in the file which MATLAB couldn't cope with, but everything else could.</p>
+							<p>The images returned were surprisingly good. Basic image processing can be done on these images. The system did take a little while storing the images to card, but with a faster SPI bus, the system should see a dramatic speed increase.</p>
+							<img src="./Images/OV7670/Example.jpg"/>
+							
+						</div>
+					</li>
+				</ul>
+			</div>
+		</detail>
 	</project>
 
 	<!--<project id="0">
-		<name></name>
-		<description></description>
+		<name/>
+		<description/>
 		<image>
-			<src></src>
-			<alt></alt>
+			<src/>
+			<alt/>
 		</image>
 		<detail>
-		<section name="Conclusion">
-			<p class="blog"></p>
-		</section>
+			<div class="body">
+				<ul>
+					<li>
+						<div>
+							<h3>Header</h3>
+							<p class="blog">Content</p>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</detail>
 	</project>-->
 </projects>
