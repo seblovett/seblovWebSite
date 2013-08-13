@@ -28,7 +28,7 @@
                 <ul>
                     <li>
                         <div class="featured">
-                            <img src="images/Me.jpg" alt="Henry In Mexico" width="260px" height="260px" />
+                            <img src="Images/Me.jpg" alt="Henry In Mexico" width="260px" height="260px" />
                         </div>
                         <div>
                             <h3 class="blog">Hello</h3>

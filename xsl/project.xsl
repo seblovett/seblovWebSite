@@ -160,7 +160,7 @@
 						<!-- BUG does not like <iframe ...> tags-->
 						<xsl:if test="//project[$number]/detail">
 							<a href="details.php?id={//project[$number]/@id}">
-								<img src="images/link_plus.jpg"/>
+								<img src="Images/link_plus.jpg"/>
 							</a>
 						</xsl:if>
 					</div>
