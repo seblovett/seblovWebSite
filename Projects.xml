@@ -35,7 +35,7 @@
 					<li>
 						<div>
 							<h3>Content</h3><p class="blog">
-				This site is pretty much a blog. The original site I started with was all hard-coded HTML. I wanted something a little more intuitive than this as manually creating pages didn't seem too fun. <br/>To do this, the Awards and Projects pages use an XML file for the content. A PHP script with-in the page calls a XSLT file (which is a 'script' to parse XML to HTML), passing a page number parameter to it.<br/>The Projects (and awards) XML is a collection of <i>project</i> elements. Within this, the name, breif description and detail are all written. The XSL then formats the data is a blog like fashion. If detail exists, a link is made to direct to the details page.<br/>The XSL takes this XML, along with the page you are on. It calculates the start and end points and prints the correct number of projects. If detail exists, then a link is placed. The page links are also constructed from the XSL. By referencing page -1, the XSL will print a full list of the projects in alphabetical order. This is access by a link at the top of the page. <br/>The details page (which you are on now), uses the same XML but a different XSL. The project ID is passed and the relevant project detail is printed out. This saves having to have an individual page per project, but will ultimately end up with a large XML file. Images and other HTML elements can also be added. <br/>The system is hardly amazing. A better (but more costly) way would be to use a SQL database. Maybe one day I'll change to this.
+				This site is pretty much a blog. The original site I started with was all hard-coded HTML. I wanted something a little more intuitive than this as manually creating pages didn't seem too fun. <br/>To do this, the Awards and Projects pages use an XML file for the content. A PHP script with-in the page calls a XSLT file (which is a 'script' to parse XML to HTML), passing a page number parameter to it.<br/>The Projects (and awards) XML is a collection of <i>project</i> elements. Within this, the name, breif description and detail are all written. The XSL then formats the data is a blog like fashion. If detail exists, a link is made to direct to the details page.<br/>The XSL takes this XML, along with the page you are on. It calculates the start and end points and prints the correct number of projects. If detail exists, then a link is placed. The page links are also constructed from the XSL. By referencing page -1, the XSL will print a full list of the projects in alphabetical order. This is access by a link at the top of the page. <br/>The details page (which you are on now), uses the same XML but a different XSL. The project ID is passed and the relevant project detail is printed out. This saves having to have an individual page per project, but will ultimately end up with a large XML file. images and other HTML elements can also be added. <br/>The system is hardly amazing. A better (but more costly) way would be to use a SQL database. Maybe one day I'll change to this.
 							</p>
 						</div>
 					</li>
@@ -147,7 +147,7 @@
 						<div>
 							<h3>Circuit</h3>
 							<br/>
-							<img src="Images/scopeCD.png" alt="Circuit Diagram of the Tek Scope Hack"/>
+							<img src="images/scopeCD.png" alt="Circuit Diagram of the Tek Scope Hack"/>
 							<br/>
 							<br/>
 							<br/>
@@ -191,8 +191,8 @@
 				<ul>
 					<li>
 						<div class="featured">
-							<a href="Images/tek.jpg">
-								<img src="Images/tek.jpg" width="260px"/>
+							<a href="images/tek.jpg">
+								<img src="images/tek.jpg" width="260px"/>
 							</a>
 						</div>
 						<div>
@@ -211,7 +211,7 @@
 							<h3>Results</h3><p class="blog">
 					This project was a resounding success. Though only two modules can be unlocked at any one time, that's two more than I would have had. The image is proof that I have them unlocked. My next steps for this would be to either make a device to program the stick quickly, or make another, potentially designing a PCB for it too. 
 							</p>
-							<img src="Images/TekProof.png" />
+							<img src="images/TekProof.png" />
 						</div>
 					</li>
 				</ul>
@@ -234,8 +234,8 @@
 				<ul>
 					<li>
 						<div class="featured">
-							<a href="Images/columbus.jpg">
-								<img src="Images/columbus.jpg" width="260px"/>
+							<a href="images/columbus.jpg">
+								<img src="images/columbus.jpg" width="260px"/>
 							</a>
 						</div>
 						<div>
@@ -251,8 +251,8 @@
 				<ul>
 					<li>
 						<div class="featured">
-							<a href="Images/PCB_Top.jpg">
-								<img src="Images/PCB_Top.jpg" width="260px"/>
+							<a href="images/PCB_Top.jpg">
+								<img src="images/PCB_Top.jpg" width="260px"/>
 							</a>
 						</div>
 						<div>
@@ -310,7 +310,7 @@
 						<div>
 							<h3>The Camera</h3>
 							<p class="blog">The OV7670 is a cheap digital camera able to produce VGA sized (640px x 420px) images in YUV or RGB format. The device is packaged as a Ball Grid Array (BGA) so the PCB breakout board is vital. As well as all the passives and clocks needed, the board has a small lens and a First In First Out (FIFO) buffer. This is so that the device can be used on low speed devices. The FIFO buffer writing is controlled by the camera. The enable and reset is controlled by the user.</p>
-							<a href="Images/OV7670/Schematic.jpg"><img src="./Images/OV7670/Schematic.jpg" width="100%"/></a>
+							<a href="images/OV7670/Schematic.jpg"><img src="./images/OV7670/Schematic.jpg" width="100%"/></a>
 						</div>
 					</li>
 				</ul>
@@ -323,7 +323,7 @@
 							<p class="blog">In my second year, we were given this camera during a design exercise, but we were all defeated by it. In the two week in the labs, students were experiencing odd behaviour. </p>
 							<p>After much annoyance, it became apparent that there was a PCB fault on the device. Pin 8 of the FIFO buffer, the Write Reset, was connected to another pin (the exact fault escapes me) which caused the buffer to clear it's own memory. </p>
 							<p>To solve this, Pin 8 of the buffer can be lifted from the board, and connected to Pin 5 of the header, which is also disconnected from the board. Once this is done, the camera should be fairly straight forward!</p>
-							<a href="Images/OV7670/modification.jpg"><img src="./Images/OV7670/modification.jpg" width="50%"/></a>
+							<a href="images/OV7670/modification.jpg"><img src="./images/OV7670/modification.jpg" width="50%"/></a>
 						</div>
 					</li>
 				</ul>
@@ -343,7 +343,7 @@
 
 							<p>After the data is been read, the buffer is reset by asserting the read reset (RRST) and write reset (WRST) signals for at least one clock cycle of RCLK or PCLK respectively.</p>
 							<p>The following is a capture from my Scope showing all this in a waveform.</p>
-							<img src="./Images/OV7670/signals.png"/>
+							<img src="./images/OV7670/signals.png"/>
 							
 						</div>
 					</li>
@@ -356,7 +356,7 @@
 							<h3>Implementation</h3>
 							<p class="blog">An atMega644P was used to implement the code. The device has very limited RAM - 153kB were needed for one full QVGA image (320x240px) but the microcontroller only has 4kB. To solve this, an SD card for external memory was used. The FAT-FS library provided a good stable implementation with little modifications needed. From here, a Bitmap image could be written. </p><p>Bitmap was chosen as it required no compression, which doesn't matter at the size of the images being written. I used an old header in the file which MATLAB couldn't cope with, but everything else could.</p>
 							<p>The images returned were surprisingly good. Basic image processing can be done on these images. The system did take a little while storing the images to card, but with a faster SPI bus, the system should see a dramatic speed increase.</p>
-							<img src="./Images/OV7670/Example.jpg"/>
+							<img src="./images/OV7670/Example.jpg"/>
 							
 						</div>
 					</li>
