@@ -56,6 +56,17 @@
 				<ul>
 					<li>
 						<div>
+							<h3>Hosting</h3><p class="blog">
+								A friend recommended <a href="http://www.webhosting.uk.com/">Web Hosting UK</a> to me. I had look around as well, but still found these guys to be one of the cheapest. After purchasing the domain and some hosting, I attempted to put this site online. I encountered issues right away as my email had put the important email with all my hosting details into my spam folder, and I hadn't noticed... A quick chat to the very helpful customer service resulted in me getting the site up and running quite quickly! I recommend the hosting after the small amount of time I've used it. The control panel has an expansive number of functions and options that I could only dream of using!
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="body">
+				<ul>
+					<li>
+						<div>
 							<h3>Conclusion</h3><p class="blog">
 				Most of what I have learnt has been self taught. My XSL / XML skills I learnt whilst working at <a href="www.atmel.com">Atmel</a> in the summer of 2013. PHP was used briefly for this project, but it isn't anything amazing. Most of the labourious work is done by the XSL and the PHP just calls the XSL. This site has been enjoyable to build. It's an area I have never experienced before and hopefully I will continue to develop it and keep it up to date with what I am doing. 
 							</p>
@@ -70,7 +81,7 @@
 		<date>July 2013</date>
 		<description>I find RFID technology fascinating. We already see it in many places around us (bank cards, bus passes, building access just to name a few) and I wanted to start looking into the technology. This article covers some basic reading and writing a card using a OEM-MIFARE Reader and an mBed development board. This project isn't near complete - I hope to turn it into a USB Device and implement some desktop software. I also hope to look at how RFID works, and how to make a cheap reader for use in other projects. <br/> This project covers using the MIFARE reader / writer. The interface is easy to use and little experience was needed with RFID to get reading data from the card. Use of an internal EEPROM and a slow RS232 communications at 9600 BPS is the MIFARE's main let down. </description>
 		<image>
-			<src>images/mifare.jpg</src>
+			<src>Images/mifare.jpg</src>
 			<alt>MIFARE RFID Card Reader Writer</alt>
 		</image>
 		<detail>
@@ -125,7 +136,7 @@
 		<date>April 2013</date>
 		<description>I have a Tektronix MSO2012 Oscilloscope that I got for my 21st Birthday. The scope itself is extemely good. The UI is easy and the screen is large. Plenty good enough for my uses. One critisism, though, was the need to purchase the extra software. Tektronix offers three add on modules to unlock software features such as I<sup>2</sup>C and SPI decoding and triggering, amongst other useful things. These come with a 30 day free trial. After having it for a few days, I began looking into how to unlock these features without the <a href="http://uk.farnell.com/tektronix/dpo2embd/module-embedded-serial-trigger/dp/1665107">£200 price tag</a> that they retail at. <br/> The hack was relitevly simple and required a SIM Card reader and an I<sup>2</sup>C EEPROM. Once the module was build and the EEPROM programmed, the software (well 2/3rds of it) was unlocked. See the link for details on how it was done.</description>
 		<image>
-			<src>images/tek.jpg</src>
+			<src>Images/tek.jpg</src>
 			<alt/>
 		</image>
 		<detail>
@@ -147,7 +158,7 @@
 						<div>
 							<h3>Circuit</h3>
 							<br/>
-							<img src="images/scopeCD.png" alt="Circuit Diagram of the Tek Scope Hack"/>
+							<img src="Images/scopeCD.png" alt="Circuit Diagram of the Tek Scope Hack"/>
 							<br/>
 							<br/>
 							<br/>
@@ -191,8 +202,8 @@
 				<ul>
 					<li>
 						<div class="featured">
-							<a href="images/tek.jpg">
-								<img src="images/tek.jpg" width="260px"/>
+							<a href="Images/tek.jpg">
+								<img src="Images/tek.jpg" width="260px"/>
 							</a>
 						</div>
 						<div>
@@ -211,7 +222,7 @@
 							<h3>Results</h3><p class="blog">
 					This project was a resounding success. Though only two modules can be unlocked at any one time, that's two more than I would have had. The image is proof that I have them unlocked. My next steps for this would be to either make a device to program the stick quickly, or make another, potentially designing a PCB for it too. 
 							</p>
-							<img src="images/TekProof.png" />
+							<img src="Images/TekProof.png" />
 						</div>
 					</li>
 				</ul>
@@ -226,7 +237,7 @@
 		<description>The Part III project is an individual project undertaken in the Third year at Southampton University. For my project, I undertook an ambitious project to build an autonomous stereoscopic mapping robot. Though the full specification of the robot was not acheived, the final result was a built robot able to respond to movement. <br/>
 	The Robot used to OV7670 cameras and an AVR32UC3C Microcontroller with an extra 4MB of RAM. The PCB was custom made by <a href="www.pcbcart.com">PCB Cart</a> and is a four layer board.</description>
 		<image>
-			<src>images/columbus.JPG</src>
+			<src>Images/columbus.JPG</src>
 			<alt>The Columbus Robot</alt>
 		</image>
 		<detail>
@@ -234,8 +245,8 @@
 				<ul>
 					<li>
 						<div class="featured">
-							<a href="images/columbus.jpg">
-								<img src="images/columbus.jpg" width="260px"/>
+							<a href="Images/columbus.jpg">
+								<img src="Images/columbus.jpg" width="260px"/>
 							</a>
 						</div>
 						<div>
@@ -251,8 +262,8 @@
 				<ul>
 					<li>
 						<div class="featured">
-							<a href="images/PCB_Top.jpg">
-								<img src="images/PCB_Top.jpg" width="260px"/>
+							<a href="Images/PCB_Top.jpg">
+								<img src="Images/PCB_Top.jpg" width="260px"/>
 							</a>
 						</div>
 						<div>
@@ -309,8 +320,8 @@
 					<li>
 						<div>
 							<h3>The Camera</h3>
-							<p class="blog">The OV7670 is a cheap digital camera able to produce VGA sized (640px x 420px) images in YUV or RGB format. The device is packaged as a Ball Grid Array (BGA) so the PCB breakout board is vital. As well as all the passives and clocks needed, the board has a small lens and a First In First Out (FIFO) buffer. This is so that the device can be used on low speed devices. The FIFO buffer writing is controlled by the camera. The enable and reset is controlled by the user.</p>
-							<a href="images/OV7670/Schematic.jpg"><img src="./images/OV7670/Schematic.jpg" width="100%"/></a>
+							<p class="blog">The OV7670 is a cheap digital camera able to produce VGA sized (640px x 420px) Images in YUV or RGB format. The device is packaged as a Ball Grid Array (BGA) so the PCB breakout board is vital. As well as all the passives and clocks needed, the board has a small lens and a First In First Out (FIFO) buffer. This is so that the device can be used on low speed devices. The FIFO buffer writing is controlled by the camera. The enable and reset is controlled by the user.</p>
+							<a href="Images/OV7670/Schematic.jpg"><img src="./Images/OV7670/Schematic.jpg" width="100%"/></a>
 						</div>
 					</li>
 				</ul>
@@ -323,7 +334,7 @@
 							<p class="blog">In my second year, we were given this camera during a design exercise, but we were all defeated by it. In the two week in the labs, students were experiencing odd behaviour. </p>
 							<p>After much annoyance, it became apparent that there was a PCB fault on the device. Pin 8 of the FIFO buffer, the Write Reset, was connected to another pin (the exact fault escapes me) which caused the buffer to clear it's own memory. </p>
 							<p>To solve this, Pin 8 of the buffer can be lifted from the board, and connected to Pin 5 of the header, which is also disconnected from the board. Once this is done, the camera should be fairly straight forward!</p>
-							<a href="images/OV7670/modification.jpg"><img src="./images/OV7670/modification.jpg" width="50%"/></a>
+							<a href="Images/OV7670/modification.jpg"><img src="./Images/OV7670/modification.jpg" width="50%"/></a>
 						</div>
 					</li>
 				</ul>
@@ -343,7 +354,7 @@
 
 							<p>After the data is been read, the buffer is reset by asserting the read reset (RRST) and write reset (WRST) signals for at least one clock cycle of RCLK or PCLK respectively.</p>
 							<p>The following is a capture from my Scope showing all this in a waveform.</p>
-							<img src="./images/OV7670/signals.png"/>
+							<img src="./Images/OV7670/signals.png"/>
 							
 						</div>
 					</li>
@@ -356,7 +367,7 @@
 							<h3>Implementation</h3>
 							<p class="blog">An atMega644P was used to implement the code. The device has very limited RAM - 153kB were needed for one full QVGA image (320x240px) but the microcontroller only has 4kB. To solve this, an SD card for external memory was used. The FAT-FS library provided a good stable implementation with little modifications needed. From here, a Bitmap image could be written. </p><p>Bitmap was chosen as it required no compression, which doesn't matter at the size of the images being written. I used an old header in the file which MATLAB couldn't cope with, but everything else could.</p>
 							<p>The images returned were surprisingly good. Basic image processing can be done on these images. The system did take a little while storing the images to card, but with a faster SPI bus, the system should see a dramatic speed increase.</p>
-							<img src="./images/OV7670/Example.jpg"/>
+							<img src="./Images/OV7670/Example.jpg"/>
 							
 						</div>
 					</li>
