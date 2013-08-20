@@ -2,9 +2,55 @@
 <?xml-stylesheet type="text/xsl" href="xsl/project.xsl"?>
 
 <projects>
-	
+	<project id="6">
+		<name>3D Printer</name>
+		<date>August 2013</date>
+		<description>From my summer earnings, I decided to buy a 3D Printer. I went for a Rep Rap Huxley - a small cheap(ish) printer. It arrived on the 16th August, and it took me the weekend to build. After hard work, it is now printing and I am currently going through a tuning process to get better prints. This project details my thoughts on the build and general aspects.</description>
+		<detail>
+			<div class="body">
+				<ul>
+					<li>
+						<div>
+							<h3>Purchase</h3><p class="blog">
+				I bought the printer from <a href="http://www.reprappro.com">RepRapPro</a>. The contact with them was minimal - it took a day for confirmation. With a lead time of 10 days, it was a long time to wait with parting with a lot of money. On the tenth day, I got a second email from them saying there would be "a short delay". Two days later, it was shipped and I had it 13 days after I bought it. 
+							</p>
+						</div>
+					</li>
+					
+					<li>
+						<div>
+							<h3>Building</h3><p class="blog">
+				The building process was quite straight forward. At times, the instructions given were confusing, but not impossible. The build took all weekend to do, mainly on my own, but I had a little help. 
+							</p>
+							<p class="blog">
+							The main problems I had were actually to do with the wiring. The printer uses a combination of screw terminals and plug sockets. The plug sockets were hand assembled and quite fiddly to make. The circuit board is well laid out and the whole things feels very solid. 
+						</div>
+					</li>
+					<li>
+						<div>
+							<h3>Software</h3><p class="blog">
+				The software side of things is mixed. The control software aspects is brilliant- Pronterface and Slic3r. They work well and the GUI, although some of the buttons could do with some human readable text (as opposed to the G Codes), it straight forward. 
+				<br/>
+				However, it is quite difficult to alter the settings of the printer. You have to look at the <a href="http://reprap.org/wiki/G-code">G Code list </a> to work out what to change, and then edit it manually by typing the G Code. A nice GUI would make it usable, but it's not vital.
+				<br/>
+				The largest problem, which probably isn't the fault of the design, is that my Windows 7 does not get along with the FTDI chip. Every time I unplug it, or power down the machine, my USB crashes on my computer, not showing any hardware changes and disallowing access to the device. Only a reboot will solve it and the shutdown stalls indefinitely, meaning a hard restart is needed. Not ideal. My long term plan is to run this from a Raspberry Pi, so I'm not too fussed at the moment. It's just an annoyance, and is probably down to my Windows more than any things else.
+							</p>
+						</div>
+					</li><li>
+						<div>
+							<h3>Tuning</h3><p class="blog">
+				The tuning process is long and on going. Little good documentation exists (I may start my own), and it's a trial and error side of things. Hopefully once it is done, my prints will become a lot better, but we shall see!
+				<br/><br/>That's all for the moment. I'll update once I have completed tuning!
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</detail>
+	</project>
 	<project id="5">
 		<name>This Website!</name>
+		<date>August 2013</date>
 		<description>After doing some projects, I decided to put them online, so I undertook the task of making a website. <br/> Using a template from <a href="http://www.freewebsitetemplates.com">freewebsitetemplates.com</a>, I began creating. The website uses a CSS template as the main style. There are some PHP scripts around as well. This Projects page uses an XML database and a XSLT style sheet to display it and is called from PHP. <br/>The result can be seen around you. It documents all the interesting things about me, from my acheivements to my projects. It is a working progress and I anticipate many changes will be made to this. I can also access it via SVN on Github!</description>
 
 		<detail>
@@ -237,7 +283,7 @@
 		<description>The Part III project is an individual project undertaken in the Third year at Southampton University. For my project, I undertook an ambitious project to build an autonomous stereoscopic mapping robot. Though the full specification of the robot was not acheived, the final result was a built robot able to respond to movement. <br/>
 	The Robot used to OV7670 cameras and an AVR32UC3C Microcontroller with an extra 4MB of RAM. The PCB was custom made by <a href="www.pcbcart.com">PCB Cart</a> and is a four layer board.</description>
 		<image>
-			<src>Images/columbus.JPG</src>
+			<src>Images/columbus.jpg</src>
 			<alt>The Columbus Robot</alt>
 		</image>
 		<detail>
