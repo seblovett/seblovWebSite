@@ -6,6 +6,7 @@
 		<name>3D Printer</name>
 		<date>August 2013</date>
 		<description>From my summer earnings, I decided to buy a 3D Printer. I went for a Rep Rap Huxley - a small cheap(ish) printer. It arrived on the 16th August, and it took me the weekend to build. After hard work, it is now printing and I am currently going through a tuning process to get better prints. This project details my thoughts on the build and general aspects.</description>
+
 		<detail>
 			<div class="body">
 				<ul>
@@ -16,31 +17,44 @@
 							</p>
 						</div>
 					</li>
-					
+
 					<li>
 						<div>
 							<h3>Building</h3><p class="blog">
-				The building process was quite straight forward. At times, the instructions given were confusing, but not impossible. The build took all weekend to do, mainly on my own, but I had a little help. 
+			The building process was quite straight forward. At times, the instructions given were confusing, but not impossible. The build took all weekend to do, mainly on my own, but I had a little help. 
 							</p>
 							<p class="blog">
-							The main problems I had were actually to do with the wiring. The printer uses a combination of screw terminals and plug sockets. The plug sockets were hand assembled and quite fiddly to make. The circuit board is well laid out and the whole things feels very solid. 
+			The main problems I had were actually to do with the wiring. The printer uses a combination of screw terminals and plug sockets. The plug sockets were hand assembled and quite fiddly to make. The circuit board is well laid out and the whole things feels very solid.</p> <img src="Images/printer.jpg" width="500"/>
 						</div>
+						
 					</li>
 					<li>
 						<div>
 							<h3>Software</h3><p class="blog">
-				The software side of things is mixed. The control software aspects is brilliant- Pronterface and Slic3r. They work well and the GUI, although some of the buttons could do with some human readable text (as opposed to the G Codes), it straight forward. 
-				<br/>
-				However, it is quite difficult to alter the settings of the printer. You have to look at the <a href="http://reprap.org/wiki/G-code">G Code list </a> to work out what to change, and then edit it manually by typing the G Code. A nice GUI would make it usable, but it's not vital.
-				<br/>
-				The largest problem, which probably isn't the fault of the design, is that my Windows 7 does not get along with the FTDI chip. Every time I unplug it, or power down the machine, my USB crashes on my computer, not showing any hardware changes and disallowing access to the device. Only a reboot will solve it and the shutdown stalls indefinitely, meaning a hard restart is needed. Not ideal. My long term plan is to run this from a Raspberry Pi, so I'm not too fussed at the moment. It's just an annoyance, and is probably down to my Windows more than any things else.
+The software side of things is mixed. The control software aspects is brilliant- Pronterface and Slic3r. They work well and the GUI, although some of the buttons could do with some human readable text (as opposed to the G Codes), it straight forward. 
+								<br/>
+However, it is quite difficult to alter the settings of the printer. You have to look at the <a href="http://reprap.org/wiki/G-code">G Code list </a> to work out what to change, and then edit it manually by typing the G Code. A nice GUI would make it usable, but it's not vital.
+								<br/>
+The largest problem, which probably isn't the fault of the design, is that my Windows 7 does not get along with the FTDI chip. Every time I unplug it, or power down the machine, my USB crashes on my computer, not showing any hardware changes and disallowing access to the device. Only a reboot will solve it and the shutdown stalls indefinitely, meaning a hard restart is needed. Not ideal. My long term plan is to run this from a Raspberry Pi, so I'm not too fussed at the moment. It's just an annoyance, and is probably down to my Windows more than any things else.
 							</p>
 						</div>
-					</li><li>
+					</li>
+					<li>
 						<div>
 							<h3>Tuning</h3><p class="blog">
-				The tuning process is long and on going. Little good documentation exists (I may start my own), and it's a trial and error side of things. Hopefully once it is done, my prints will become a lot better, but we shall see!
-				<br/><br/>That's all for the moment. I'll update once I have completed tuning!
+The tuning process is long and on going. Little good documentation exists (I may start my own), and it's a trial and error side of things. Hopefully once it is done, my prints will become a lot better, but we shall see!
+								<br/>
+							</p>
+						</div>
+					</li>
+					
+					<li>
+						<div>
+							<h3>Prints</h3><p class="blog">
+Tuning is going well. It is struggling with overhangs and oozebane at the moment. I felt daring the other day and left my printer going, unsupervised, for a few hours printing an <a href="http://www.thingiverse.com/thing:27053">Octopus waving</a>. I was shocked to see when I got back that it had succeeded. It's not flawless, but it's better than I thought!
+<img src="Images/octo.jpg" width="400"/>
+								<br/>
+								<br/>I will update with prints when they happen.
 							</p>
 						</div>
 					</li>
@@ -367,7 +381,9 @@
 						<div>
 							<h3>The Camera</h3>
 							<p class="blog">The OV7670 is a cheap digital camera able to produce VGA sized (640px x 420px) Images in YUV or RGB format. The device is packaged as a Ball Grid Array (BGA) so the PCB breakout board is vital. As well as all the passives and clocks needed, the board has a small lens and a First In First Out (FIFO) buffer. This is so that the device can be used on low speed devices. The FIFO buffer writing is controlled by the camera. The enable and reset is controlled by the user.</p>
-							<a href="Images/OV7670/Schematic.jpg"><img src="./Images/OV7670/Schematic.jpg" width="100%"/></a>
+							<a href="Images/OV7670/Schematic.jpg">
+								<img src="./Images/OV7670/Schematic.jpg" width="100%"/>
+							</a>
 						</div>
 					</li>
 				</ul>
@@ -380,7 +396,9 @@
 							<p class="blog">In my second year, we were given this camera during a design exercise, but we were all defeated by it. In the two week in the labs, students were experiencing odd behaviour. </p>
 							<p>After much annoyance, it became apparent that there was a PCB fault on the device. Pin 8 of the FIFO buffer, the Write Reset, was connected to another pin (the exact fault escapes me) which caused the buffer to clear it's own memory. </p>
 							<p>To solve this, Pin 8 of the buffer can be lifted from the board, and connected to Pin 5 of the header, which is also disconnected from the board. Once this is done, the camera should be fairly straight forward!</p>
-							<a href="Images/OV7670/modification.jpg"><img src="./Images/OV7670/modification.jpg" width="50%"/></a>
+							<a href="Images/OV7670/modification.jpg">
+								<img src="./Images/OV7670/modification.jpg" width="50%"/>
+							</a>
 						</div>
 					</li>
 				</ul>
@@ -391,7 +409,7 @@
 						<div>
 							<h3>Operation</h3>
 							<p class="blog">The camera uses a SCCB Interface created by OmniVision. This is almost identical to the $I^{2}C$ Interface by and the two protocols are compatible. The original code for the camera used a software driven SCCB interface which was very slow and used up processing time. This was changed to make use of the built-in interrupt-driven I<sup>2</sup>C interface. This communication bus is used to write to the control registers of the camera to set up the signals, image format and image size. The set-up procedure also contains an odd few commands to reserved registers and a odd end sequence. I do not understand why this is so, but it makes the camera work.</p>
-							
+
 							<p>The OV7670 is set up so that the VSYNC pin goes low at the beginning of every frame of data, and HREF is high when the output data is valid. The pixel data is then clocked out on every rising edge of PCLK. To control the buffer, WEN is logically NAND with the HREF signal. When both are high, the WEN to the buffer is active and the data will be clocked into the buffer by the camera. </p>
 
 							<p>In order to store a full image into the buffer, WEN must be high between two consecutive VSYNC pulses. VSYNC is set up to interrupt the AVR, and a small state machine is implemented to count VSYNC pulses and control WEN correctly. After the WEN signal is pulsed, the FIFO buffer will contain all the valid pixel data.</p>
@@ -401,7 +419,7 @@
 							<p>After the data is been read, the buffer is reset by asserting the read reset (RRST) and write reset (WRST) signals for at least one clock cycle of RCLK or PCLK respectively.</p>
 							<p>The following is a capture from my Scope showing all this in a waveform.</p>
 							<img src="./Images/OV7670/signals.png"/>
-							
+
 						</div>
 					</li>
 				</ul>
@@ -414,7 +432,7 @@
 							<p class="blog">An atMega644P was used to implement the code. The device has very limited RAM - 153kB were needed for one full QVGA image (320x240px) but the microcontroller only has 4kB. To solve this, an SD card for external memory was used. The FAT-FS library provided a good stable implementation with little modifications needed. From here, a Bitmap image could be written. </p><p>Bitmap was chosen as it required no compression, which doesn't matter at the size of the images being written. I used an old header in the file which MATLAB couldn't cope with, but everything else could.</p>
 							<p>The images returned were surprisingly good. Basic image processing can be done on these images. The system did take a little while storing the images to card, but with a faster SPI bus, the system should see a dramatic speed increase.</p>
 							<img src="./Images/OV7670/Example.jpg"/>
-							
+
 						</div>
 					</li>
 				</ul>

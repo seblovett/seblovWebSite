@@ -47,6 +47,12 @@
                         <h3>Recent News</h3>
 						<li>
                         <div>
+                            <h3 class="blog">3D Printer Built</h3>
+                            <p class="blog">I have got and built my 3D Printer! A couple of test prints were a success, and I'm now tuning it to get better results.</p>
+                        </div>
+                    </li>
+						<li>
+                        <div>
                             <h3 class="blog">3D Printer Imminent</h3>
                             <p class="blog">After much deliberation, I have bought a 3D printer. I went for a <a href="http://reprappro.com/products/huxley/">Huxley Rep Rap</a>. It's quite a small printer, but I thought it would suit my needs. I will be posting a project on my experiences with it when I get it!</p>
                         </div>
