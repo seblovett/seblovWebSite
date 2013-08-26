@@ -1,0 +1,3 @@
+Object from <a href="http://www.thingiverse.com/thing:53451"> here</a>.<br/>
+This is a bearing that is printed assembled. The print was successful. However, the gears would not move. I put a lot of force through it, tried to prise the gears free and even took a hammar to it. <br/>
+Upon reflection of the G Code, it became apparent that the slicing had joined the outer ring and gears together. I will be re-doing this print paying more attention to the slicing to ensure that they will move.
