@@ -24,16 +24,57 @@
 				</ul>
 			</div>
 			<div class="body">
-
+				<ul class="paging">
+				<?php
+				 	$IMAGE = 0;
+					if (isset($_REQUEST['im']))
+					{
+					  // param was set in the query string
+					   if(empty($_REQUEST['im']))
+					   {
+						 // query string had param set to nothing ie ?param=&param2=something
+					   }
+					   else
+					   {
+							$IMAGE =   $_GET['im'];
+					   }
+					}
+					$BASEDIR = 'Images/3DPrints/';	
+					$a= is_dir($BASEDIR);
+					if($a != false)
+					{
+						if($IMAGE > 0)
+						{
+							$PREV = $IMAGE - 1;
+							echo '<li><a href="Gallery.php?im='.$PREV.'">Previous</a></li>';
+						}
+						$IMAGES = glob('Images/3DPrints/*.{jpg,gif,png}', GLOB_BRACE);
+						
+						$NUMIMAGES=sizeof($IMAGES);
+						
+						if(0 < $NUMIMAGES)
+						{ 
+							for ($i = 0; $i < $NUMIMAGES; $i++) {
+								echo '<li><a href="?im='.$i.'">'.$i.'</a></li>';
+							}
+						}
+						if($IMAGE < $NUMIMAGES - 1)
+						{
+							$PREV = $IMAGE + 1;
+							echo '<li><a href="Gallery.php?im='.$PREV.'">Next</a></li>';
+						}
+					}
+				?>
+				</ul>
 				<ul>
 					<li>
 
 						<div>
 							<h3 class="blog">Gallery</h3>
-							<p class="blog">This is a simple gallery to display things I have printed with my 3D Printer. Enjoy!</p>
-
+							<p class="blog">
+						
 							<?php 
-								$IMAGE = 1;
+								$IMAGE = 0;
 								if (isset($_REQUEST['im']))
 								{
 								  // param was set in the query string
@@ -46,27 +87,37 @@
 										$IMAGE =   $_GET['im'];
 								   }
 								}
+								if (0 == $IMAGE)
+								{
+									echo 'This is a simple gallery to display things I have printed with my 3D Printer. Enjoy!<br/><br/>';
+								}
 								$BASEDIR = 'Images/3DPrints/';	
 								$a= is_dir($BASEDIR);
 								if($a != false)
 								{
-									$IMAGES = scandir($BASEDIR);
-									unset($IMAGES[0]);//get rid of the . and ..
-									unset($IMAGES[1]);
+									$IMAGES = glob('Images/3DPrints/*.{jpg,gif,png}', GLOB_BRACE);
+									
 									$NUMIMAGES=sizeof($IMAGES);
 									
-									if($IMAGE <= $NUMIMAGES)
+									if($IMAGE < $NUMIMAGES)
 									{ 
-										print_r($IMAGES);
-										echo '<img src="Images/3DPrints/'.$IMAGES[$IMAGE + 1].'"/>';
+
+										//echo '</ul>';
+										echo '<br/><br/>';
+										$filename = preg_replace('"\.(jpg|png|gif)$"', '.info', $IMAGES[$IMAGE]);
+										include $filename;
+										echo '<img src="'.$IMAGES[$IMAGE].'" width="400"/>';
 									}
 									else
 									{
-										echo 'Image Not found!';
+										echo 'Error - Image Not found! If this persists, please contact me with details on the issue.<br/>';
+										echo '<a href="Gallery.php">Please return here</a>';
+										
 									}
 								}
 
 							?>
+							</p>
 						</div>
 					</li>
 
