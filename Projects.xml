@@ -2,6 +2,82 @@
 <?xml-stylesheet type="text/xsl" href="xsl/project.xsl"?>
 
 <projects>
+	<project id="7">
+		<name>Code Lock</name>
+		<date>23rd September 2013</date>
+		<description>This was probably inspired from playing too many <a href="">spy based computer games</a>, but I decided to make a keypad lock for my desk draw. It uses a servo to do the locking and an Atmega168 to read the keypad and control the servo. The key code is programmed in the code and can be any length. The tricky part was fitting it to my draw (3D printer didn't help for this as it is currently broken). After scavenging some plastic and bolts, all was fitted. </description>
+		<image>
+			<src>Images/keypad.jpg</src>
+			<alt>Code Lock Project</alt>
+		</image>
+		<detail>
+			<div class="body">
+				<ul>
+					<li>
+						<div>
+							<h3>The Idea</h3>
+							<p class="blog">
+								The basic outline was to use a 12 digit keypad to lock and unlock my desk's draw by entering a four digit code. I had a few servos kicking around too which were of use here. The project is powed by a discretly hidden USB cable trailing out the back of my desk and plugging into my computer. The project is fairly small but quite effective. (The biggest security flaw is the fact that the draw is wooden and could easily be smashed open).<br/>Here, I will cover the scanning of the keypad, control of the PWM and a quick look at the sleep modes of the Atmegas. 
+							</p>
+						</div>
+					</li>
+					
+					<li>
+						<div>
+							<h3>Keypad</h3>
+							<p class="blog">
+								The keypad keys are aranged in a 4 by 3 matrix; one wire for each column and row. In order to detect which key, if any, has been pressed, a voltage is applied to each column in turn. The voltage at the rows is then read - if it is high, then the button can be uniquely found. <br/><br/>For example, if key 2 was pressed, when scanning the first and last columns, the rows will be logic 0. However, when middle row is scanned, there will be a logical high on row 0. This gives the coordinates of (1,0), in (column, row) form telling the microcontroller that key 2 is pressed. 
+								
+								<br/><br/><br/>
+								In order to save on components, I mixed things around. Instead of applying a logic 1 to the column to do the scan, I decided to use logic 0 instead. I did this as I could take advantage of the built in pull ups on the rows. When a button was then pressed, it would be signified by a logic 0 on the row. 
+								<br/><br/>
+								The scanning of the keypad is done by polling, though by putting a low voltage on all of the columns, any key pressed will cause a change in a row level. This can be tied to a Pin Change interrupt on the chip which could trigger a scan in the normal manner to determine the actual key pressed. I don't use an interrupt routine to scan as I use the fact the device is sleeping and use the Pin Change interrupt to wake the device. It then scans the keypad, processes any thing, and sleeps again.
+								<br/><br/>
+								Each time a key is pressed, it is compared to an internal array of numbers. If it is wrong, a counter is reset, correct, the counter increments. When the counter reaches the size of the array (i.e. end of the code), it locks / unlocks the draw by moving the servo. I also made it if the drawer is unlocked and the user presses the Hash key, the draw will lock.
+							</p>
+						</div>
+					</li>
+					
+					<li>
+						<div>
+							<h3>PWM</h3>
+							<p class="blog">
+								Servos are usually controlled by <a href="http://en.wikipedia.org/wiki/Pulse-width_modulation">Pulse Width Modulation (PWM)</a>. TLDR - a square wave with varyiable duty cycle - same frequency, different amount of time that the voltage is high. <br/><br/>
+								PWM is controlled by a Timer. Any of them can be used. The idea is that the counter will count up to it's maximum value. On the way, it will pass the Compare value (TOCR). When the counter value and this matches, the output is turned off. When the counter overflows (goes back to zero), the output is turned back on. A low compare value will generate a small high time, and a high value will generate a predominantly high signal. A Servo can then be controlled using this signal. For information on how a servo works, I found <a href="http://www.sciencebuddies.org/science-fair-projects/project_ideas/Robotics_ServoMotors.shtml?from=Blog">this was quite useful.</a>
+								
+								<br/><br/>
+								I needed the servo to rotate a total of 90 degrees between locked and unlocked. I didn't do any maths here, I worked it by trial and error. I hope to formalise this in the future, especially if I'm doing something more intricate. 
+							</p>
+						</div>
+					</li>
+					
+					<li>
+						<div>
+							<h3>Sleep Modes</h3>
+							<p class="blog">
+								The idea was this device to be battery operated. At the moment it is powered from my computer, but this will change when I buy some more voltage regulators. Having a microcontroller run full pelt all the time will drain batteries fairly quickly. To get around this, most microcontrollers provide sleep modes and some power management options. The idea is to spend as much time in a sleep mode, and to turn off everything you don't need.
+								
+								<br/><br/>Looking at the ATmega 168, there are 5 sleeps modes. Each have different levels of power consumption and have varying wake up sources. The 5 modes are: Idle, ADC noise reduction, Power-down, Power-save, Standby.
+									<br/>To enable one of these modes, the Sleep Mode Control Register (SMCR) must be programmed with the correct code, and the SE bit set (to enable sleep modes). Some modes require the use of an external oscillator. Then, to enter the sleep, the sleep_cpu() function is called (from avr/sleep.h). In this project, I used the pin change to wake the device. Once woken, the AVR continues the operation in an Interrupt Service Routine, or continues operation from where it was set to sleep.
+									<br/><br/>To save more power, the Power Reduction Register (PRR) enables the peripherals to be turned off. The more turned off, the more power saved. I turned off all the peripherals except Timer 1. The UART is used in a Debug build and not in a Release. This is controlled by the preprocessor commands, testing if DEBUG or NDEBUG is defined to include the relevant code. 
+								
+							</p>
+						</div>
+					</li>
+					
+					<li>
+						<div>
+							<h3>Conclusion</h3>
+							<p class="blog">
+								I built the device on veriboard and put in in the corner of my drawer, with the keypad attached to the front of the draw. The servo arm points vertically to lock, and I attached an L shaped plastic bracket to the underside of my desk for it to engage with. It does the job that I wanted it to do. While I won't be putting really valuable things in, it's a neat gimmic to have. All files and code can be found on my <a href="https://github.com/seblovett/codelock/tree/master">GitHub</a>. 
+							</p>
+							<img width="500" src="Images/codelock_inplace.jpg"/><img width="500" src="Images/codelock_built.jpg"/><img width="500" src="Images/codelock_front.jpg"/>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</detail>
+	</project>
 	<project id="6">
 		<name>3D Printer</name>
 		<date>August 2013</date>
