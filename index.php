@@ -47,6 +47,12 @@
                         <h3>Recent News</h3>
 						<li>
                         <div>
+                            <h3 class="blog">3D Printer Broken!</h3>
+                            <p class="blog">During a print, the heater element for the hot end snagged on something and fell out. I had left the printer alone, and I came home to a half finished print and a heater which had baked itself. When cool, I inspected the heater and in it's time out of place, it gained a lot of carbon. Then, while cleaning it, I snapped off a leg. It was not a good day. A new heater has been ordered, but for the time being, I can't print...</p>
+                        </div>
+                    </li>
+						<li>
+                        <div>
                             <h3 class="blog">3D Printer Built</h3>
                             <p class="blog">I have got and built my 3D Printer! A couple of test prints were a success, and I'm now tuning it to get better results.</p>
                         </div>
